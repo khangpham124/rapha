@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[JASMINE TEA FLAVOURED JELLY POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[240]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[SWEET AIYU JELLY POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[190]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[EGG FLAVOURED PUDDING POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[240]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[TARO FLAVOURED PUDDING POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[240]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+</data>

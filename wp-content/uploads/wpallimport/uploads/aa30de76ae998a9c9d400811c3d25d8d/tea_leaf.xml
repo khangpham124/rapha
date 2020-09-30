@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[Ceylon Black Tea Leaf  * 904 ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[370]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Oolong Tea Leaf ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[540]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Jasmine Green Tea Leaf * 667 ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[490]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Barley ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[430]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Thai Tea Leaf]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[90]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Butterfly Tea]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[90]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Oolong Green Tea Leaf ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[540]]></column_3>
+		<column_4><![CDATA[50 bags per box]]></column_4>
+	</node>
+</data>

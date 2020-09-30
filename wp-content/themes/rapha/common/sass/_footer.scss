@@ -1,0 +1,144 @@
+footer {
+	margin-top: 80px;
+	padding: 25px 0;
+	border-top: 1px solid #d2d4d5;
+	.brand-info {
+		width: 37%;
+	}
+	.brand-img {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+	}
+	.brand-name {
+		font-weight: $font-bold;
+	}
+	.footer-menu {
+		margin: 0;
+		padding: 0;
+		li {
+			font-size: 14px;
+			font-family: $font-roboto;
+			display: inline-block;
+			line-height: 30px;
+			a {
+				color: $color-white;
+				padding-right: 20px;
+			    border-right: 1px solid;
+			    margin-right: 16px;
+			}
+			&:last-child {
+				a {
+					border-right: none;	
+				}
+		    }
+		}
+	}
+	.copy-right {
+		font-size: 14px;
+		font-family: $font-roboto;
+		line-height: 30px;
+		@media (max-width: 767px) {
+			font-size: 11px;
+		}
+	}
+	.contact-info {
+		width: 29%;
+	}
+	.contact-title {
+		font-weight: $font-bold;
+		margin-bottom: 10px;
+	}
+	.contact {
+		padding-left: 30px;
+		margin-bottom: 30px;
+		position: relative;
+		i {
+			position: absolute;
+			left: 0;
+			top: 6px;
+    		font-size: 16px;
+		}
+	}
+	.address-title {
+		font-weight: $font-bold;
+		margin-bottom: 10px;
+	}
+	.address {
+		padding-left: 30px;
+		position: relative;
+		i {
+			position: absolute;
+			left: 0;
+			top: 6px;
+    		font-size: 16px;
+		}
+	}
+	.follow-info {
+		width: 34%;
+	}
+	.follow-title {
+		font-weight: $font-bold;
+		display: inline-block;
+    	margin-right: 30px;
+    	margin-bottom: 40px;
+	}
+	.ico-group {
+		display: inline-block;
+	}
+	.fb-ico,.youtube-ico {
+		margin-right: 10px;
+		i {
+			color: $color-white;
+			font-size: 16px;
+		}
+	}
+	.map {
+		width: 370px;
+		height: 181px;
+		background-color: $color-bg-gray;
+	}
+}
+
+@media (max-width: 767px) {
+	footer {
+		padding-bottom: 60px;
+		.brand-info {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.footer-menu {
+			li {
+				display: block;
+				a {
+					border-right: 0;
+				}
+			}
+		}
+		.copy-right {
+			
+		}
+		.contact-info {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.contact-title {
+			margin-bottom: 0;
+		}
+		.contact {
+			margin-bottom: 10px;
+		}
+		.address-title {
+			margin-bottom: 0;
+		}
+		.follow-info {
+			width: 100%;
+		}
+		.follow-title {
+			margin-bottom: 5px;
+		}
+		.map {
+			width: 100%;
+		}
+	}
+}

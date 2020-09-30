@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[FRUCTOSE]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[30]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[BROWN SUGAR FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CARAMEL WINTERMELON FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[HONEYDEW]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[57]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[GINGER FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[89]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[HONEY SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[75]]></column_3>
+		<column_4><![CDATA[10 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CARAMEL FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[56]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[BLACK SUGAR SAUCE ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[55]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[MANGO FLAVOURED SAUCE ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[ROSE LYCHEE FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[57]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CALAMONDIN FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[79]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[LEMON FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[62]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[STRAWBERRY FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[70]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[PINEAPPLE FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[LYCHEE FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[PASSION FRUIT FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[PEACH FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[GRAPEFRUIT FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[78]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[KUMQUAT SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Dally Vanilla Syrup]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[100]]></column_3>
+		<column_4><![CDATA[12 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Dally Hazelnut Syrup]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[100]]></column_3>
+		<column_4><![CDATA[12 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[WINTERMELON FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[KIWI  FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[GUAVA FLAVOURED SYRUP]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[4 bottles per box]]></column_4>
+	</node>
+</data>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<tealeaf><![CDATA[Ceylon Black Tea Leaf  ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Oolong Tea Leaf ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Jasmine Green Tea Leaf ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Barley ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Thai Tea Leaf]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Butterfly Tea]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Oolong Green Tea Leaf ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【POWDERS】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[COCONUT POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[ALMOND FLAVOURED POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[PREMIUM TARO FLAVOURED POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[GREEN (MUNG) BEAN POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CHOCOLATE  POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[MATCHA POWDER (ORIGINAL)]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[PREMIUM MATCHA MILK TEA POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[2 IN 1 COFFEE POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CREAMER FOAM POWDER (SALTY FLAVOR)]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CREAMER FOAM POWDER (CHEEZE FLAVOR)]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[SMOOTHIE POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[NON DAIRY CREAMER  ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CHICKEN MARINATED POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【SYRUPS】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[FRUCTOSE]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[BROWN SUGAR FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CARAMEL WINTERMELON FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[HONEYDEW]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[GINGER FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[HONEY SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CARAMEL FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[BLACK SUGAR SAUCE ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[MANGO FLAVOURED SAUCE ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[ROSE LYCHEE FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[CALAMONDIN FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[LEMON FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[STRAWBERRY FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[PINEAPPLE FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[LYCHEE FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[PASSION FRUIT FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[PEACH FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[GRAPEFRUIT FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[KUMQUAT SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Dally Vanilla Syrup]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Dally Hazelnut Syrup]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[WINTERMELON FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[KIWI  FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[GUAVA FLAVOURED SYRUP]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【PUDDINGS】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[JASMINE TEA FLAVOURED JELLY POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[SWEET AIYU JELLY POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[EGG FLAVOURED PUDDING POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[TARO FLAVOURED PUDDING POWDER]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【TOPPINGS】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Pineapple  Coconut Jelly]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Lychee Jelly]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Rainbow Jelly]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Coffee Jelly]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Mango Star Jelly ]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Strawberry Star Jelly ]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Aloe Pulp in Syrup]]></tealeaf>
+		<undefined1><![CDATA[can]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Strawberry Particles (Jam)]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Passion Fruit Particles (Jam)]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[RED BEAN IN CANNED (COOKED) ]]></tealeaf>
+		<undefined1><![CDATA[can]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[SMASHED FRESH TARO]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[GRASS JELLY SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[can]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[LONGAN & RED DATES FLAVOURED SYRUP ]]></tealeaf>
+		<undefined1><![CDATA[bottle]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Black Tapioca Pearl - 0.9mm  ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[3Q Pearl (10mm) - Original Flavor]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Golden Boba- 0.8mm ]]></tealeaf>
+		<undefined1><![CDATA[bag]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Yogurt Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Passion Fruit Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[L ychee Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Mango Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Pomegranate Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Kiwi Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Peach Popping Boba]]></tealeaf>
+		<undefined1><![CDATA[tub]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【MACHINE】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Sealing Machine]]></tealeaf>
+		<undefined1><![CDATA[machine]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Sugar Machine]]></tealeaf>
+		<undefined1><![CDATA[machine]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Water Boiler]]></tealeaf>
+		<undefined1><![CDATA[machine]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[【EQUIPMENTS】]]></tealeaf>
+		<undefined1><![CDATA[]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Small 6mm Straw (21cm, Wrapped)]]></tealeaf>
+		<undefined1><![CDATA[pcs]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Large 12mm Straw (21cm, Wrapped)]]></tealeaf>
+		<undefined1><![CDATA[pcs]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[700cc Q-Cup]]></tealeaf>
+		<undefined1><![CDATA[pcs]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[500cc Q-Cup]]></tealeaf>
+		<undefined1><![CDATA[pcs]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Sealing Film]]></tealeaf>
+		<undefined1><![CDATA[roll]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Shaker Cup 700 ML]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Shaker Cup 530 ML]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Creamer Spoon]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[Tea Barrel]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[1.5oz Jigger]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+	<node>
+		<tealeaf><![CDATA[2oz Jigger]]></tealeaf>
+		<undefined1><![CDATA[psc]]></undefined1>
+	</node>
+</data>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[Sealing Machine]]></column_1>
+		<column_2><![CDATA[machine]]></column_2>
+		<column_3><![CDATA[820]]></column_3>
+		<column_4><![CDATA[1 machine]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Sugar Machine]]></column_1>
+		<column_2><![CDATA[machine]]></column_2>
+		<column_3><![CDATA[830]]></column_3>
+		<column_4><![CDATA[1 machine]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Water Boiler]]></column_1>
+		<column_2><![CDATA[machine]]></column_2>
+		<column_3><![CDATA[1150]]></column_3>
+		<column_4><![CDATA[1 machine]]></column_4>
+	</node>
+</data>

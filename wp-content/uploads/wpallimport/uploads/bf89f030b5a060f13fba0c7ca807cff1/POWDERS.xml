@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[COCONUT POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[260]]></column_3>
+		<column_4><![CDATA[20 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[ALMOND FLAVOURED POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[190]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[PREMIUM TARO FLAVOURED POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[187]]></column_3>
+		<column_4><![CDATA[24 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[GREEN (MUNG) BEAN POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[260]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CHOCOLATE  POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[240]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[MATCHA POWDER (ORIGINAL)]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[480]]></column_3>
+		<column_4><![CDATA[20 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[PREMIUM MATCHA MILK TEA POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[320]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[2 IN 1 COFFEE POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[160]]></column_3>
+		<column_4><![CDATA[20 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CREAMER FOAM POWDER (SALTY FLAVOR)]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[185]]></column_3>
+		<column_4><![CDATA[25 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CREAMER FOAM POWDER (CHEEZE FLAVOR)]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[185]]></column_3>
+		<column_4><![CDATA[25 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[SMOOTHIE POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[167]]></column_3>
+		<column_4><![CDATA[24 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[NON DAIRY CREAMER  ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[90]]></column_3>
+		<column_4><![CDATA[12 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[CHICKEN MARINATED POWDER]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[220]]></column_3>
+		<column_4><![CDATA[20 bags per box]]></column_4>
+	</node>
+</data>

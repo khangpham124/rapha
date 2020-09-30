@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[Pineapple  Coconut Jelly]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[6 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Lychee Jelly]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[60]]></column_3>
+		<column_4><![CDATA[6 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Rainbow Jelly]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[40]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Coffee Jelly]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[42]]></column_3>
+		<column_4><![CDATA[6 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Mango Star Jelly ]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Strawberry Star Jelly ]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[100]]></column_3>
+		<column_4><![CDATA[10 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Aloe Pulp in Syrup]]></column_1>
+		<column_2><![CDATA[can]]></column_2>
+		<column_3><![CDATA[56]]></column_3>
+		<column_4><![CDATA[6 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Strawberry Particles (Jam)]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[100]]></column_3>
+		<column_4><![CDATA[10 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Passion Fruit Particles (Jam)]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[100]]></column_3>
+		<column_4><![CDATA[10 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[RED BEAN IN CANNED (COOKED) ]]></column_1>
+		<column_2><![CDATA[can]]></column_2>
+		<column_3><![CDATA[68]]></column_3>
+		<column_4><![CDATA[6 cans per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[SMASHED FRESH TARO]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[187]]></column_3>
+		<column_4><![CDATA[30 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[GRASS JELLY SYRUP ]]></column_1>
+		<column_2><![CDATA[can]]></column_2>
+		<column_3><![CDATA[36]]></column_3>
+		<column_4><![CDATA[6 cans per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[LONGAN & RED DATES FLAVOURED SYRUP ]]></column_1>
+		<column_2><![CDATA[bottle]]></column_2>
+		<column_3><![CDATA[81]]></column_3>
+		<column_4><![CDATA[6 bottles per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Black Tapioca Pearl - 0.9mm  ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[32]]></column_3>
+		<column_4><![CDATA[6 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[3Q Pearl (10mm) - Original Flavor]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[48]]></column_3>
+		<column_4><![CDATA[6 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Golden Boba- 0.8mm ]]></column_1>
+		<column_2><![CDATA[bag]]></column_2>
+		<column_3><![CDATA[45]]></column_3>
+		<column_4><![CDATA[6 bags per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Yogurt Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Passion Fruit Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[L ychee Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Mango Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Pomegranate Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Kiwi Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+	<node>
+		<column_1><![CDATA[Peach Popping Boba]]></column_1>
+		<column_2><![CDATA[tub]]></column_2>
+		<column_3><![CDATA[50]]></column_3>
+		<column_4><![CDATA[4 tubs per box]]></column_4>
+	</node>
+</data>
