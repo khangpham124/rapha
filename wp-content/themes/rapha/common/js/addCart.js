@@ -11,6 +11,7 @@ function listCookies() {
 
 function renderCart() {
     const carInner = $('#cart-in');
+    const cartHead = $('#cart-head');
     var htmlCart = '';
     var numb = 0;
     var getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
@@ -24,6 +25,7 @@ function renderCart() {
     });
     $('.js-numbCart').html(numb);
     carInner.html(htmlCart);
+    cartHead.html(htmlCart);
 }
 
 
@@ -64,7 +66,7 @@ if(sizeCart > 0) {
 }
 
 
-$('#list-products').on('click', '.addToCard', function() {    
+$('#list-products').on('click', '.addToCard', function() {
     var isThis = $(this);
     var isQuan = $(this).parent().prev().find('.quantity');
     var quantity = parseInt(isQuan.val());
@@ -138,6 +140,11 @@ $('.js-get-booking').click(function() {
     var urlBooking = $('#urlBooking').val();
     var address = $('#addressDeliver').val();
     var idUser = $('#iduser').val();
+    var fullname = $('#fullname').val();
+    var phone = $('#phone').val();
+    var email = $('#email').val();
+
+
     var orderDate = $('#dateorder').val();
     var noted = $('#noted').val();
     var totalPrice = $('#totalPrice').text();
@@ -148,11 +155,16 @@ $('.js-get-booking').click(function() {
     bodyFormData.append("orderDate", orderDate );
     bodyFormData.append("noted", noted );
     bodyFormData.append("totalPrice", totalPrice );
+
+    bodyFormData.append("fullname", fullname );
+    bodyFormData.append("phone", phone );
+    bodyFormData.append("email", email );
     
     var booking = JSON.parse(localStorage.getItem('minicart'));
     for (var i = 0; i < booking.length; i++) {
         bodyFormData.append("prod_name_"+ i , booking[i]['name_pro'] );
         bodyFormData.append("prod_quan_"+ i , booking[i]['quantity'] );
+        bodyFormData.append("prod_price_"+ i , booking[i]['price'] );
     }
     bodyFormData.append("numberOder", booking.length );
 
@@ -163,7 +175,7 @@ $('.js-get-booking').click(function() {
         url: urlBooking
     };
     axios(options).then(function (response) {
-        console.log(response)
-        // window.location.href = 'http://example.com';
+        localStorage.removeItem('minicart');
+        window.location.href = 'http://localhost:8888/rapha/confirm';
     });
 });

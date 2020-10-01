@@ -1,8 +1,8 @@
 <?php /* Template Name: Login */ ?>
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
+include(APP_PATH."libs-user/redirect.php");
 
-include(APP_PATH."libs-user/head.php");
 ?>
 </head>
 
@@ -24,7 +24,7 @@ include(APP_PATH."libs-user/head.php");
     </div>
 
 
-    <div class="loop-wrapper">
+<div class="loop-wrapper">
   <div class="mountain"></div>
   <div class="hill"></div>
   <div class="tree"></div>

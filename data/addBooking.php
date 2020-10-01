@@ -2,11 +2,15 @@
 include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 		$address = $_POST['address'];
-		$pid = $_POST['idUser'];
+		$idUser = $_POST['idUser'];
 		$orderDate = $_POST['orderDate'];
 		$noted = $_POST['noted'];
 		$orderDate = $_POST['orderDate'];
 		$totalPrice = $_POST['totalPrice'];
+
+		$fullname = $_POST['fullname'];
+		$phone = $_POST['phone'];
+		$email = $_POST['email'];
 
 		$IDBooking = 'RAP'. $pid .rand(10,100);
         $customer_post = array(
@@ -20,15 +24,20 @@ include(LOAD_PATH."/wp-load.php");
         add_post_meta($pid, 'address', $address);
         add_post_meta($pid, 'order_date', $orderDate);
 		update_post_meta($pid, 'status', 'confirm');
-		update_post_meta($pid, 'userid', $pid);
+		update_post_meta($pid, 'userid', $idUser);
 		update_post_meta($pid, 'note', $noted);
 		update_post_meta($pid, 'total', $totalPrice);
+
+		update_post_meta($pid, 'fullname', $fullname);
+		update_post_meta($pid, 'phone', $phone);
+		update_post_meta($pid, 'email', $email);
 		
 		$listBooking = array();
 		$numberOder = $_POST['numberOder'];
 		for($n=0; $n<$numberOder; $n++) {
 			$listBooking[$n]['name_pro'] = $_POST['prod_name_'.$n];
 			$listBooking[$n]['quantity'] = $_POST['prod_quan_'.$n];
+			$listBooking[$n]['price'] = $_POST['prod_price_'.$n];
 		}
 	
         update_field('order_detail', $listBooking, $pid);

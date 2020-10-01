@@ -5,8 +5,14 @@
                     <img src="<?php echo APP_ASSETS ?>img/header/logo_white.svg">
                 </a>
                 <div class="nav-bar--right flex-box">
-                    <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
-                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <div class="wrap-form">
+                        <form action="<?php echo APP_URL; ?>tracking" method="post">
+                            <input class="input-page" placeholder="Nhập mã đơn hàng" name="idBooking">
+                            <button><i class="fa fa-search" aria-hidden="true"></i></a></button>
+                        </form>                        
+                    </div>
+                    <a href="javascript:void(0)" class="js-toogle-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="js-numbCart numb-cart numbCart">0</span></a>
+                    
                     <div class="navbar--right flex-box flex-box--end">
                         <div class="nav-menu-button sp">
                             <div class="bar1"></div>
@@ -16,6 +22,9 @@
                     </div>
                 </div>
                 
+            </div>
+            <div class="cart-head">
+                <ul id='cart-head' class="list-cart"></ul>
             </div>
     </div>
 </header>

@@ -1,5 +1,5 @@
 <aside class="hideSide">
-    <h3>Hello, <?php echo $_COOKIE['name_cookies']; ?></h3>
+    <h3>Hello, <?php echo $fullname; ?></h3>
     <ul>
         <li><a href="<?php echo APP_URL; ?>dashboard"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Mua hàng hoá</a></li>
         <li><a href="<?php echo APP_URL; ?>orders"><i class="fa fa-file-text-o" aria-hidden="true"></i>Quản lý đơn hàng</a></li>

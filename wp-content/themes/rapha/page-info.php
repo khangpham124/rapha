@@ -5,7 +5,7 @@ include(APP_PATH."libs-user/head.php");
 ?>
 </head>
 
-<body id="top" class="dashboard">
+<body id="info" class="dashboard">
     <div id="wrapper">
         <!--Header-->
         <?php include(APP_PATH."libs-user/header.php"); ?>
@@ -35,11 +35,11 @@ include(APP_PATH."libs-user/head.php");
                                 </td>
                                 <tr>
                                     <td>New password</td>
-                                    <td><input type="password" class="input-page" value=""</td>
+                                    <td><input type="password" class="input-page" value="" id="pw"></td>
                                 </td>
                                 <tr>
                                     <td>Re-password</td>
-                                    <td><input type="password" class="input-page" value=""</td>
+                                    <td><input type="password" class="input-page js-check-pass" value="" id="re-pw"></td>
                                 </td>
                             </form>
                         </table>
@@ -48,8 +48,9 @@ include(APP_PATH."libs-user/head.php");
                     
                 </div>
                 <div class="mt--30">
-                    <a href="" class="btn-page js-get-booking">Cập nhật</a>
+                    <a href="" class="btn-page js-update-info disable">Cập nhật</a>
                 </div>
+                <input type="hidden" name="idUser" id="idUser" value="<?php echo $userID; ?>">
                 </form>
             </div>
         </div>

@@ -65,7 +65,7 @@ include(APP_PATH."libs-user/head.php");
                                 <p class="list-products-price grid--10">'.get_field('price').' $</p>
                                 <div class="list-products-quantity grid--15">
                                     <button class="js-button asc" rel="asc"><i class="fa fa-minus" aria-hidden="true"></i></button>
-                                    <input type="number" class="quantity input-page" value="0">
+                                    <input type="number" class="quantity input-page" value="1">
                                     <button class="js-button desc" rel="desc"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                 </div>
                                 <p class="grid--15 list-products-button"><a href="javascript:void(0)" class="btn-page addToCard" data-price="'.get_field('price').'" data-id="'.$post->ID.'" data-title="'.$post->post_title.'">Add to cart</a></p>

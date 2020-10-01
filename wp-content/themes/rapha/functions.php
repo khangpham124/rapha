@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 add_theme_support('post-thumbnails');
 //login logo
 function custom_login_logo() {
@@ -272,4 +273,98 @@ function add_product_endpoint(){
     $wp_post_types['product']->show_in_rest = true;
     $wp_post_types['product']->rest_base = 'product';
     $wp_post_types['product']->rest_controller_class = 'WP_REST_Posts_Controller';
+}
+
+
+add_action( 'admin_menu', 'add_orders_menu_bubble' );
+function add_orders_menu_bubble() {
+  global $menu;
+  $orderStatus = get_posts(array(
+    'post_type' => 'booking',
+    'posts_per_page' => -1,
+    'meta_query' => array(
+      array(
+        'key' => 'status',
+        'value' => 'confirm',
+        'compare' => '=',
+      )
+    ),
+  ));
+  if ( count($orderStatus) ) {
+    foreach ( $menu as $key => $value ) {
+      if ( $menu[$key][2] == 'edit.php?post_type=booking' ) {
+        $menu[$key][0] .= ' <span class="update-plugins count-1"><span class="plugin-count">' . count($orderStatus) . '</span></span>';
+        return;
+      }
+    }
+  }
+}
+
+$colorStatusArr = array(
+  'confirm' =>array('color'=>'#ffa300','icon'=>'dashicons-clipboard'),
+  'progress' =>array('color'=>'#03c73f','icon'=>'dashicons-welcome-write-blog'),
+  'cancel' =>array('color'=>'#ff0c0c','icon'=>'dashicons-no'),
+  'shipping' =>array('color'=>'#009222','icon'=>'dashicons-admin-tools'),
+  'complete' =>array('color'=>'#009222','icon'=>'dashicons-saved'),
+);
+
+// CUSTOMER ORDER
+add_filter( 'manage_edit-booking_columns', 'my_edit_booking_columns' ) ;
+function my_edit_booking_columns( $columns ) {
+  $columns = array(
+    'cb' => '<input type="checkbox" />',
+    'title' => __( 'Title' ),
+    'fullname' => __( 'Customer Name' ),
+    'email' => __( "User's Mail" ),
+    'phone' => __( 'Phone' ),
+    'status' => __( 'Booking Status' ),
+    'date' => __( 'Date' ),
+
+  );
+  return $columns;
+}
+
+add_action( 'manage_booking_posts_custom_column', 'my_manage_booking_columns', 10, 2 );
+function my_manage_booking_columns( $column, $post_id ) {
+  global $post, $colorStatusArr;
+  switch( $column ) {
+    
+    case 'status':
+      $orderStatus = get_field('status');
+      $field_key = "field_5f732bd24935d";
+      $field = get_field_object($field_key);
+      if(isset($orderStatus)) {
+        echo '<span style="color: '.$colorStatusArr[$orderStatus]['color'].'"><i class="dashicons '.$colorStatusArr[$orderStatus]['icon'].'"></i> '.$field['choices'][$orderStatus].'</span>';
+      }
+    break;
+
+    case 'phone':
+      $cus_name = get_field('phone');
+      $field_key = "field_5f7546b3dc245";
+      $field = get_field_object($field_key);
+      if(isset($cus_name)) {
+        echo $field['value'];
+      }
+    break;
+
+    case 'email':
+      $cus_name = get_field('email');
+      $field_key = "field_5f7546badc246";
+      $field = get_field_object($field_key);
+      if(isset($cus_name)) {
+        echo $field['value'];
+      }
+    break;
+
+    case 'fullname':
+      $cus_name = get_field('fullname');
+      $field_key = "field_5f7546a7dc244";
+      $field = get_field_object($field_key);
+      if(isset($cus_name)) {
+        echo $field['value'];
+      }
+    break;
+
+  }
+  return;
 }

@@ -132,3 +132,39 @@ $('#search-form').on('keyup keypress', function(e) {
 function formatNumber (num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 }
+
+$('.js-toggle').click(function() {
+    $(this).parent().parent().next('.order-list-detail').slideToggle(200);
+});
+
+$('.js-check-pass').keyup(function() {
+    var pw = $('#pw').val();
+    if((pw === $(this).val())&&(pw != '')) {
+        $('.js-update-info').removeClass('disable');
+    } else {
+        $('.js-update-info').addClass('disable');
+    }
+});
+
+
+$('.js-update-info').click(function() {
+    var isThis = $(this);
+    var urlBooking = "http://localhost:8888/rapha/data/changePass.php";
+    var bodyFormData = new FormData();
+    var password = $('#pw').val();
+    var idUser = $('#idUser').val();
+    bodyFormData.append("password", password );
+    bodyFormData.append("idUser", idUser );
+    isThis.html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+    const options = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        data: bodyFormData,
+        url: urlBooking
+    };
+    axios(options).then(function (response) {
+        isThis.html('<i class="fa fa-shopping-cart"></i> Đã Cập nhật');
+        $('#pw').val('');
+        $('#re-pw').val('');
+    });
+}); 
