@@ -133,18 +133,29 @@ $('#cart-in').on('click', '.js-remove-item', function() {
 });
 
 
-$('.js-booking').click(function() {
+$('.js-get-booking').click(function() {
     var bodyFormData = new FormData();
     var urlBooking = $('#urlBooking').val();
     var address = $('#addressDeliver').val();
     var idUser = $('#iduser').val();
     var orderDate = $('#dateorder').val();
     var noted = $('#noted').val();
+    var totalPrice = $('#totalPrice').text();
+    
 
     bodyFormData.append("address", address );
     bodyFormData.append("idUser", idUser );
     bodyFormData.append("orderDate", orderDate );
     bodyFormData.append("noted", noted );
+    bodyFormData.append("totalPrice", totalPrice );
+    
+    var booking = JSON.parse(localStorage.getItem('minicart'));
+    for (var i = 0; i < booking.length; i++) {
+        bodyFormData.append("prod_name_"+ i , booking[i]['name_pro'] );
+        bodyFormData.append("prod_quan_"+ i , booking[i]['quantity'] );
+    }
+    bodyFormData.append("numberOder", booking.length );
+
     const options = {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -152,6 +163,7 @@ $('.js-booking').click(function() {
         url: urlBooking
     };
     axios(options).then(function (response) {
-        console.log('done');
+        console.log(response)
+        // window.location.href = 'http://example.com';
     });
 });

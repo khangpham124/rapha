@@ -65,7 +65,7 @@ function my_custom_booking()
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => 5,
-    'supports' => array('title','editor'),
+    'supports' => array('title'),
     'has_archive' => true
   );
   register_post_type('booking',$args);

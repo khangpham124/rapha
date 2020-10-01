@@ -74,11 +74,11 @@ include(APP_PATH."libs-user/head.php");
                 </div>
                 <div class="mt--30">
                     <a href="<?php echo APP_URL; ?>dashboard" class="btn-page">Quay lại</a>
-                    <a href="" class="btn-page js-get-booking">Đặt hàng</a>
+                    <a href="javascript:void(0)" class="btn-page js-get-booking">Đặt hàng</a>
                 </div>
             </div>
         </div>
-        <input type="hidden" id="iduser" value="<?php echo $idUser; ?>">
+        <input type="hidden" id="iduser" value="<?php echo $userID; ?>">
         <input type="hidden" id="dateorder" value="<?php echo date("d-m-Y H:i:s"); ?>">
         <input type="hidden" id="urlBooking" value="<?php echo APP_URL; ?>data/addBooking.php">
         <!--Footer-->

@@ -14,7 +14,7 @@ function renderCheckout() {
                 </tr>`
         total +=   subTotal;     
     });
-    htmlCart += `<tr><td colspan="3">Total</td><td colspan="2">`+ total +` $</td></tr>`;
+    htmlCart += `<tr><td colspan="3">Total</td><td colspan="2"><span id="totalPrice">`+ total +`</span> $</td></tr>`;
     checkoutList.html(htmlCart);
 }
 renderCheckout();
