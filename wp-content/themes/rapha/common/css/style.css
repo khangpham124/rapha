@@ -960,6 +960,7 @@ footer {
     height: 80px;
     position: relative; }
     .dashboard .header .cart-head {
+      display: none;
       position: absolute;
       top: 80px;
       padding: 20px;

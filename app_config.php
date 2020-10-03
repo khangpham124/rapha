@@ -1,9 +1,9 @@
 <?php
-	define("APP_URL", "http://localhost:8888/rapha/");
-	define("APP_ASSETS", "http://localhost:8888/rapha/wp-content/themes/rapha/common/");
-	define("APP_URL_USER", "http://localhost:8888/rapha/dashboard");
-	define("APP_PATH", "/Applications/MAMP/htdocs/rapha/wp-content/themes/rapha/");
-	define("LOAD_PATH", "/Applications/MAMP/htdocs/rapha/");
-	define("DATA_PATH", "/Applications/MAMP/htdocs/rapha/data/");
+	define("APP_URL", "https://teddycoder.com/projects/rapha-tea/");
+	define("APP_ASSETS", "https://teddycoder.com/projects/rapha-tea/wp-content/themes/rapha/common/");
+	define("APP_URL_USER", "https://teddycoder.com/projects/rapha-tea/dashboard");
+	define("APP_PATH", "/home/teddycoder/public_html/projects/amario/wp-content/themes/rapha/");
+	define("LOAD_PATH", "/home/teddycoder/public_html/projects/amario/");
+	define("DATA_PATH", "/home/teddycoder/public_html/projects/amario/data/");
 ?>
 

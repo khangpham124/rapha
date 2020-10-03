@@ -24,7 +24,9 @@
                 
             </div>
             <div class="cart-head">
-                <ul id='cart-head' class="list-cart"></ul>
+                <ul id='cart-head' class="list-cart">
+                Chưa có sản phẩm nào
+                </ul>
             </div>
     </div>
 </header>

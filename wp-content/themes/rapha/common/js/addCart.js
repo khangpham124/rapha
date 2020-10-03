@@ -62,7 +62,8 @@ if(sizeCart > 0) {
     renderCart();
     $('.btn-checkout').show();
 } else {
-    $('#cart-in').html('<p class="mt--40">Chưa có sản phẩm nào</p>');
+    $('#cart-in').html('<p class="mt--40">Chưa có sản phẩm</p>');
+    $('#cart-head').html('Chưa có sản phẩm');
 }
 
 
@@ -176,6 +177,6 @@ $('.js-get-booking').click(function() {
     };
     axios(options).then(function (response) {
         localStorage.removeItem('minicart');
-        window.location.href = 'http://localhost:8888/rapha/confirm';
+        window.location.href = 'https://teddycoder.com/projects/rapha-tea/confirm';
     });
 });

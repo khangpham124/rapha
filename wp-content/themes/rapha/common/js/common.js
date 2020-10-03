@@ -109,7 +109,7 @@ $('.js-suggest').keyup(function() {
     $.ajax({ // create an AJAX call...
         data: $('#search-form').serialize(), // get the form data
         type: 'POST', // GET or POST
-        url: "http://localhost:8888/rapha/ajax.php", // the file to call
+        url: "https://teddycoder.com/projects/rapha-tea/ajax.php", // the file to call
         success: function(response) { // on success..
             var newHtml = response;
             $('#list-products').empty();
@@ -149,7 +149,7 @@ $('.js-check-pass').keyup(function() {
 
 $('.js-update-info').click(function() {
     var isThis = $(this);
-    var urlBooking = "http://localhost:8888/rapha/data/changePass.php";
+    var urlBooking = "https://teddycoder.com/projects/rapha-tea/data/changePass.php";
     var bodyFormData = new FormData();
     var password = $('#pw').val();
     var idUser = $('#idUser').val();
@@ -167,4 +167,8 @@ $('.js-update-info').click(function() {
         $('#pw').val('');
         $('#re-pw').val('');
     });
-}); 
+});
+
+$('.js-toogle-cart').click(function() {
+    $('.cart-head').slideToggle(200);
+});
