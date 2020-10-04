@@ -86,6 +86,7 @@
             -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.4);
             box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.4);
             width: 350px;
+            z-index: 200;
             .list-cart {
                 margin-top: 0;
             }
@@ -94,7 +95,7 @@
             width: 140px;
             height: auto;
         }
-        a {
+        a.js-toogle-cart {
             color: $color-white;
             font-size: 24px;
             margin-left: 15px;
@@ -386,7 +387,13 @@
             display: none;
             color: $color-dark;
             font-style: italic;
+            background: $color-white;
         }
+    }
+    .text-note {
+        font-style: italic;
+        font-size: 12px;
+        color: $color-thin-gray;
     }
 }
 .login {

@@ -259,7 +259,7 @@ function get_keys_for_duplicate_values($my_arr, $clean = false) {
 
 function wmpudev_enqueue_icon_stylesheet() {
 
-  wp_register_style( 'fontawesome', 'http:////maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+  wp_register_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
   
   wp_enqueue_style( 'fontawesome');
   
@@ -303,9 +303,9 @@ function add_orders_menu_bubble() {
 $colorStatusArr = array(
   'confirm' =>array('color'=>'#ffa300','icon'=>'dashicons-clipboard'),
   'progress' =>array('color'=>'#03c73f','icon'=>'dashicons-welcome-write-blog'),
-  'cancel' =>array('color'=>'#ff0c0c','icon'=>'dashicons-no'),
-  'shipping' =>array('color'=>'#009222','icon'=>'dashicons-admin-tools'),
-  'complete' =>array('color'=>'#009222','icon'=>'dashicons-saved'),
+  'cancel' =>array('color'=>'#E02020','icon'=>'dashicons-no'),
+  'shipping' =>array('color'=>'#07407e','icon'=>'dashicons-airplane'),
+  'complete' =>array('color'=>'#009222','icon'=>'dashicons-yes-alt'),
 );
 
 // CUSTOMER ORDER
@@ -367,4 +367,14 @@ function my_manage_booking_columns( $column, $post_id ) {
 
   }
   return;
+}
+
+function generateRandomString($length = 20) {
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $charactersLength = strlen($characters);
+  $randomString = '';
+  for ($i = 0; $i < $length; $i++) {
+      $randomString .= $characters[rand(0, $charactersLength - 1)];
+  }
+  return $randomString;
 }

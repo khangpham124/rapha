@@ -969,13 +969,14 @@ footer {
       -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
       -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
       box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
-      width: 350px; }
+      width: 350px;
+      z-index: 200; }
       .dashboard .header .cart-head .list-cart {
         margin-top: 0; }
     .dashboard .header .logo {
       width: 140px;
       height: auto; }
-    .dashboard .header a {
+    .dashboard .header a.js-toogle-cart {
       color: #fff;
       font-size: 24px;
       margin-left: 15px; }
@@ -1185,7 +1186,12 @@ footer {
     .dashboard .order-list-detail {
       display: none;
       color: #404040;
-      font-style: italic; }
+      font-style: italic;
+      background: #fff; }
+  .dashboard .text-note {
+    font-style: italic;
+    font-size: 12px;
+    color: #A0A0A0; }
 
 .login-box {
   position: absolute;

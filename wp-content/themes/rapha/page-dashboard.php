@@ -1,6 +1,6 @@
 <?php /* Template Name: Dashboard */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">

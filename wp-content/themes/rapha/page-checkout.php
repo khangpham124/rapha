@@ -1,6 +1,6 @@
 <?php /* Template Name: Checkout */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 </head>
@@ -70,6 +70,7 @@ include(APP_PATH."libs-user/head.php");
                                     <textarea id="noted" class="input-page"></textarea>
                                 </td>
                         </table>
+                        <em class="mt--20 text-note">Bạn có thể thêm địa chỉ giao hàng trong mục 'Sổ địa chỉ'</em>
                     </div>
                 </div>
                 <div class="mt--30">

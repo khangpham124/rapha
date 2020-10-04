@@ -168,7 +168,7 @@ $('.js-get-booking').click(function() {
         bodyFormData.append("prod_price_"+ i , booking[i]['price'] );
     }
     bodyFormData.append("numberOder", booking.length );
-
+    $(this).addClass('disable');
     const options = {
         method: 'POST',
         headers: { 'content-type': 'application/json' },

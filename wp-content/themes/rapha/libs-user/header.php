@@ -27,6 +27,7 @@
                 <ul id='cart-head' class="list-cart">
                 Chưa có sản phẩm nào
                 </ul>
+                <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
             </div>
     </div>
 </header>

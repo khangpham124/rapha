@@ -27,7 +27,7 @@
 <?php endif; ?>
 <!--responsive or smartphone-->
 
-<title><?php echo $titlepage = 'test'; ?></title>
+<title><?php echo $titlepage = 'Rapha Tea Dashboard'; ?></title>
 
 <!--css-->
 <link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/style.css" media="all">

@@ -1,11 +1,11 @@
 <?php /* Template Name: Address */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 </head>
 
-<body id="address" class="dashboard">
+<body id="address_page" class="dashboard">
     <div id="wrapper">
         <!--Header-->
         <?php include(APP_PATH."libs-user/header.php"); ?>
