@@ -555,6 +555,12 @@ button {
   .btn-page.disable {
     opacity: .3;
     pointer-events: none; }
+  .btn-page--outline {
+    border: 1px solid #07407e;
+    background: none;
+    color: #07407e;
+    padding: 5px 15px;
+    border-radius: 4px; }
 
 .grid--80 {
   width: 80%; }
@@ -714,6 +720,20 @@ button.slick-prev {
     border-bottom: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
     padding: 10px; }
+
+.logo_teddy {
+  position: relative;
+  padding-left: 15px; }
+  .logo_teddy .dot {
+    position: absolute;
+    bottom: 22px;
+    left: 37px;
+    background: #fff;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%; }
+  .logo_teddy img {
+    height: 45px; }
 
 .header {
   padding: 20px 0; }
@@ -1021,7 +1041,11 @@ footer {
       bottom: 30px;
       font-size: 12px;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
   .dashboard .main-content {
     width: 78%;
     padding: 40px; }
@@ -1167,7 +1191,12 @@ footer {
     width: 100%;
     border-collapse: collapse; }
     .dashboard .order-list a {
-      color: #07407e; }
+      border: 1px solid #07407e;
+      background: none;
+      color: #07407e;
+      padding: 5px 15px;
+      border-radius: 4px;
+      margin: 0 5px; }
     .dashboard .order-list thead {
       background: #f5f5f5;
       font-weight: bold; }

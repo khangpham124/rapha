@@ -157,6 +157,10 @@
             font-size: 12px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
     }
     .main-content {
@@ -354,7 +358,12 @@
         width: 100%;
         border-collapse: collapse;
         a {
+            border: 1px solid $color-blue-dark;
+            background: none;
             color: $color-blue-dark;
+            padding: 5px 15px;
+            border-radius: 4px;
+            margin: 0 5px;
         }
         thead {
             background: $color-light-gray;

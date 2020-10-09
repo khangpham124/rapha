@@ -17,19 +17,19 @@ include(APP_PATH."libs-user/head.php");
                 <div class="flex-box flex-box--between">
                     <div class="grid--48">
                         <form method="post" action="" id="form-address">
-                            <h2 class="h2_page">Thêm địa chỉ mới</h2>
+                            <h2 class="h2_page">Add new address</h2>
                             <table class="table-page mt--30">
                                 <tr>
-                                    <td> Địa chỉ mới</td>
+                                    <td> New address</td>
                                     <td><input type='text' class="input-page" name="address" id="address" placeholder="Nhập địa chỉ mới"></td>
                                 </tr>
                             </table>
                             <input type="hidden" name="iduser" id="iduser" value="<?php echo $userID; ?>" >
-                            <a href="javascript:void(0)" class="btn-page js-add-address mt--30" data-action="<?php echo APP_URL; ?>data/addAddress.php">Thêm</a>
+                            <a href="javascript:void(0)" class="btn-page js-add-address mt--30" data-action="<?php echo APP_URL; ?>data/addAddress.php">Add</a>
                         </form>
                     </div>
                     <div class="grid--48">
-                        <h2 class="h2_page">Sổ địa chỉ</h2>
+                        <h2 class="h2_page">Address Book</h2>
                         <div class="mt--30">
                             <ul id="list-address" data-action="<?php echo APP_URL; ?>data/rmvAddress.php" data-id="<?php echo $userID; ?>">
                                 <?php

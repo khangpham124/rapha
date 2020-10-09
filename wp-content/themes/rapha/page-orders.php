@@ -33,11 +33,12 @@ include(APP_PATH."libs-user/head.php");
                         $wp_query->query($param);
                         if($wp_query->have_posts()): ?>
                         <thead>
-                            <td class="grid--20">Mã đơn hàng</td>
-                            <td class="grid--20">Tình trạng</td>
-                            <td class="grid--20">Thành tiền</td>
-                            <td class="grid--30">Ngày đặt</td>
-                            <td class="grid--10">Chi tiết</td>
+                            <td class="grid--20">Order ID</td>
+                            <td class="grid--10">Status</td>
+                            <td class="grid--20">Total</td>
+                            <td class="grid--20">Order date</td>
+                            <td class="grid--20">Last update</td>
+                            <td class="grid--30">Action</td>
                         </thead>
                         
                         <tbody>
@@ -48,10 +49,17 @@ include(APP_PATH."libs-user/head.php");
                         <td colspan="5">
                             <div class="flex-box flex-box--between">
                                 <p class="grid--20"><?php echo $post->post_title; ?></p>
-                                <p class="grid--20"><?php echo get_field('status'); ?></p>
+                                <p class="grid--10"><?php echo get_field('status'); ?></p>
                                 <p class="grid--20"><?php echo get_field('total'); ?>$</p>
-                                <p class="grid--30"><?php echo get_field('order_date'); ?></p>
-                                <p class="grid--10"><a href="javascript:void(0)" class="js-toggle"><i class="fa fa-info-circle" aria-hidden="true"></i></a></p>
+                                <p class="grid--20"><?php echo get_field('order_date'); ?></p>
+                                <p class="grid--20"><?php echo get_field('last_update'); ?></p>
+                                <p class="grid--30">
+                                    <a href="javascript:void(0)" class="js-toggle"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    <?php if(get_field('status') == 'Processed') { ?>
+                                        <a href="javascript:void(0)" data-edit="<?php echo $post->ID; ?>" class="js-cancel-booking btn--outline"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="javascript:void(0)" data-cancel="<?php echo $post->ID; ?>" class="js-cancel-booking btn-page--outline">Cancel Booking</a>
+                                    <?php } ?>
+                                </p>
                             </div>
                             
                             <div class="order-list-detail">
@@ -71,7 +79,7 @@ include(APP_PATH."libs-user/head.php");
                     </tr>
                     <?php endwhile;
                     else: ?>
-                    Bạn chưa có đơn hàng nào
+                    There are no orders
                     <?php endif; ?>
                     </tbody>
                     
@@ -81,6 +89,13 @@ include(APP_PATH."libs-user/head.php");
         <!--Footer-->
         <?php include(APP_PATH."libs-user/footer.php"); ?>
         <!--/Footer-->
+    </div>
+
+    <div class="popup">
+        <form method="post" id="formUpdate">
+            <div id="formUpdateContent"></div>
+            <input type="hidden" value="<?php echo date("d-m-Y H:i:s"); ?>" name="last_update">
+        </form>
     </div>
 </body>
 </html>	

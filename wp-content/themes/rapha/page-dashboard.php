@@ -18,9 +18,9 @@ include(APP_PATH."libs-user/head.php");
                 <div class="blockPage blockPage--full main-dashboard">
                     
                     <div class="flex-box flex-box--between">
-                    <h2 class="h2_page">Danh sách sản phẩm</h2>
+                    <h2 class="h2_page">Produts List</h2>
                         <form id="search-form" class="grid--40">
-                            <input class="input-page  js-suggest" type="text" name="suggest" value="" id="suggest" placeholder="Tìm kiếm sản phẩm">
+                            <input class="input-page  js-suggest" type="text" name="suggest" value="" id="suggest" placeholder="Search products">
                         </form>
                     </div>
                     <ul class="list-products" id="list-products">
@@ -54,24 +54,30 @@ include(APP_PATH."libs-user/head.php");
                             'field' => 'slug',
                             'terms' => $slug
                             )
-                            )
+                            ),
                             );
                             $wp_query->query($param);
                             if($wp_query->have_posts()):while($wp_query->have_posts()) : $wp_query->the_post();
-                                echo '<li class="flex-box flex-box--between">
-                                <p class="grid--35"><strong>'.$post->post_title.'</strong></p>
-                                <p class="grid--15">'.get_field('package').'</p>
-                                <p class="grid--10">'.get_field('unit').'</p>
-                                <p class="list-products-price grid--10">'.get_field('price').' $</p>
+                            ?>
+                                <li class="flex-box flex-box--between">
+                                <p class="grid--35"><strong><?php echo $post->post_title; ?></strong></p>
+                                <p class="grid--15"><?php echo get_field('package'); ?></p>
+                                <p class="grid--10"><?php echo get_field('unit'); ?></p>
+                                <p class="list-products-price grid--10"><?php echo get_field('price') ?> $</p>
                                 <div class="list-products-quantity grid--15">
                                     <button class="js-button asc" rel="asc"><i class="fa fa-minus" aria-hidden="true"></i></button>
                                     <input type="number" class="quantity input-page" value="1">
                                     <button class="js-button desc" rel="desc"><i class="fa fa-plus" aria-hidden="true"></i></button>
                                 </div>
-                                <p class="grid--15 list-products-button"><a href="javascript:void(0)" class="btn-page addToCard" data-price="'.get_field('price').'" data-id="'.$post->ID.'" data-title="'.$post->post_title.'">Add to cart</a></p>
-                                </li>';
-                            endwhile;endif;
-                        ?>
+                                <p class="grid--15 list-products-button">
+                                    <?php if((get_field('invisible')=='no')||(get_field('invisible')=='')) { ?>
+                                    <a href="javascript:void(0)" class="btn-page addToCard" data-price="<?php echo get_field('price'); ?>" data-id="'<?php echo $post->ID; ?>" data-title="<?php echo $post->post_title; ?>">Add to cart</a>
+                                    <?php } else { ?>
+                                        temporary
+                                    <?php } ?>
+                                </p>
+                                </li>
+                            <?php endwhile;endif; ?>
                             </ul>
                         </li>
                     <?php        
@@ -81,7 +87,7 @@ include(APP_PATH."libs-user/head.php");
                 </div>
                 <div class="cart-fixed">
                     <div class="cart-fixed-inner js-cart-fixed-inner">
-                        <h2 class="h2_page numbCart bg--grey">Giỏ hàng (<span class="js-numbCart">0</span>)</h2>
+                        <h2 class="h2_page numbCart bg--grey">Your Cart (<span class="js-numbCart">0</span>)</h2>
                         <ul id='cart-in' class="list-cart"></ul>
                         <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
                     </div>

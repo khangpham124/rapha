@@ -3,7 +3,7 @@ error_reporting(0);
 add_theme_support('post-thumbnails');
 //login logo
 function custom_login_logo() {
-        echo '<style type="text/css">h1 a { background: url('.get_bloginfo('template_directory').'/images/logo.png) 50% 50% no-repeat !important; }</style>';
+        echo '<style type="text/css">h1 a { background: url('.get_bloginfo('template_directory').'/images/logo.png;) 50% 50% no-repeat !important; width:320px !important;height:141px !important; }</style>';
 }
 
 add_action('login_head', 'custom_login_logo');
@@ -57,7 +57,7 @@ function my_custom_booking()
   );
   $args = array(
     'labels' => $labels,
-    'menu_icon'   => 'dashicons-text-page',
+    'menu_icon'   => 'dashicons-tag',
     'public' => true,
     'publicly_queryable' => true,
     'show_ui' => true,
@@ -70,6 +70,40 @@ function my_custom_booking()
     'has_archive' => true
   );
   register_post_type('booking',$args);
+}
+
+
+add_action('init', 'my_custom_purchase_booking');
+function my_custom_purchase_booking()
+{
+  $labels = array(
+    'name' => _x('Purchase Booking', 'post type general name'),
+    'singular_name' => _x('Purchase Booking', 'post type singular name'),
+    'add_new' => _x('Add Purchase Booking', 'news'),
+    'add_new_item' => __('Add new item'),
+    'edit_item' => __('Edit Booking'),
+    'new_item' => __('New Item'),
+    'view_item' => __('View Item'),
+    'search_staff' => __('sample記事を探す'),
+    'not_found' =>  __('Not found'),
+    'not_found_in_trash' => __('Not found'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'menu_icon'   => 'dashicons-cart',
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => 5,
+    'supports' => array('title'),
+    'has_archive' => true
+  );
+  register_post_type('purchase_booking',$args);
 }
 
 add_action('init', 'my_custom_store');
@@ -198,6 +232,65 @@ function create_productcat_taxonomy () {
 }
 
 
+
+add_action('init', 'my_custom_menus');
+function my_custom_menus()
+{
+  $labels = array(
+    'name' => _x('Menu', 'post type general name'),
+    'singular_name' => _x('Menu', 'post type singular name'),
+    'add_new' => _x('Add Item Menu', 'news'),
+    'add_new_item' => __('Add new item'),
+    'edit_item' => __('Edit Menu'),
+    'new_item' => __('New Item'),
+    'view_item' => __('View Item'),
+    'not_found' =>  __('Not found'),
+    'not_found_in_trash' => __('Not found'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'menu_icon'   => 'dashicons-list-view',
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => 5,
+    'supports' => array('title'),
+    'has_archive' => true
+  );
+  register_post_type('menus',$args);
+}
+
+
+add_action ('init','create_menuscat_taxonomy','0');
+function create_menuscat_taxonomy () {
+	$taxonomylabels = array(
+	'name' => _x('Menu Categories','post type general name'),
+	'singular_name' => _x('menuscat','post type singular name'),
+	'search_items' => __('menuscat'),
+	'all_items' => __('menuscat'),
+	'parent_item' => __( 'Parent Cat' ),
+	'parent_item_colon' => __( 'Parent Cat:' ),
+	'edit_item' => __('Menu Categories'),
+	'add_new_item' => __('Add new'),
+	'menu_name' => __( 'categories' ),
+	);
+	$args = array(
+	'labels' => $taxonomylabels,
+	'hierarchical' => true,
+	'has_archive' => true,
+	'show_ui' => true,
+	 'query_var' => true,
+	 'rewrite' => array( 'slug' => 'menuscat' )
+	);
+	register_taxonomy('menuscat','menus',$args);
+}
+
+
 // Deal with images uploaded from the front-end while allowing ACF to do it's thing
 function my_acf_pre_save_post($post_id) {
 
@@ -285,7 +378,7 @@ function add_orders_menu_bubble() {
     'meta_query' => array(
       array(
         'key' => 'status',
-        'value' => 'confirm',
+        'value' => 'Processed',
         'compare' => '=',
       )
     ),
@@ -301,11 +394,11 @@ function add_orders_menu_bubble() {
 }
 
 $colorStatusArr = array(
-  'confirm' =>array('color'=>'#ffa300','icon'=>'dashicons-clipboard'),
-  'progress' =>array('color'=>'#03c73f','icon'=>'dashicons-welcome-write-blog'),
-  'cancel' =>array('color'=>'#E02020','icon'=>'dashicons-no'),
-  'shipping' =>array('color'=>'#07407e','icon'=>'dashicons-airplane'),
-  'complete' =>array('color'=>'#009222','icon'=>'dashicons-yes-alt'),
+  'Processed' =>array('color'=>'#ffa300','icon'=>'dashicons-clipboard'),
+  'Confirmed' =>array('color'=>'#03c73f','icon'=>'dashicons-welcome-write-blog'),
+  'Canceled' =>array('color'=>'#E02020','icon'=>'dashicons-no'),
+  'Shipped' =>array('color'=>'#07407e','icon'=>'dashicons-airplane'),
+  'Delivered' =>array('color'=>'#009222','icon'=>'dashicons-yes-alt'),
 );
 
 // CUSTOMER ORDER

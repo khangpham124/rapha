@@ -346,6 +346,13 @@ button {
 		opacity: .3;
 		pointer-events: none;
 	}
+	&--outline {
+		border: 1px solid $color-blue-dark;
+		background: none;
+		color: $color-blue-dark;
+		padding: 5px 15px;
+		border-radius: 4px;
+	}
 }
 
 .grid {
@@ -536,6 +543,23 @@ button.slick-prev {
 			border-left: 1px solid $color-border;
 			padding: 10px;
 		}
+	}
+}
+
+.logo_teddy {
+	position: relative;
+	padding-left: 15px;;
+	.dot {
+		position: absolute;
+		bottom: 22px;
+		left: 37px;
+		background: #fff;
+		width: 4px;
+		height: 4px;
+		border-radius: 100%;
+	}
+	img {
+		height: 45px;
 	}
 }
 

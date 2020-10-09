@@ -17,7 +17,7 @@ include(APP_PATH."libs-user/head.php");
                 <form method="post">
                 <div class="flex-box flex-box--between">
                     <div class="blockPage blockPage--full grid--48">
-                        <h2 class="h2_page">Thông tin tài khoản</h2>
+                        <h2 class="h2_page">Account Information</h2>
                         <div class="mt--30">
                         <table class="table-page">
                             <form action="" method="post">
@@ -48,7 +48,7 @@ include(APP_PATH."libs-user/head.php");
                     
                 </div>
                 <div class="mt--30">
-                    <a href="" class="btn-page js-update-info disable">Cập nhật</a>
+                    <a href="" class="btn-page js-update-info disable">Update</a>
                 </div>
                 <input type="hidden" name="idUser" id="idUser" value="<?php echo $userID; ?>">
                 </form>
