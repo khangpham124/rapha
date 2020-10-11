@@ -1,5 +1,5 @@
 /* check and insert number of item */
-
+TweenMax.to(".dot", 0.6, { ease: Bounce.easeOut, y: '10px', yoyo: true, repeat: -1, delay: 0.4 });
 function listCookies() {
     var theCookies = document.cookie.indexOf('compare').split(';');
     var aString = '';

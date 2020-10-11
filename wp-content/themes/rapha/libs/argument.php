@@ -12,7 +12,7 @@ switch ($pagename) {
 	break;
 	 
     default:
-		$titlepage = "Amario|Booking";			
+		$titlepage = "RaphaTea | Boba Tea House";			
 		$desPage = "";
 		$keyPage = "";
 		$txtH1 = "H1 Default";

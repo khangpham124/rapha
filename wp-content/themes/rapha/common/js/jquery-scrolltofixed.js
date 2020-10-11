@@ -560,6 +560,6 @@
 
 /* ---- */
 $(document).ready(function() {
-	$('.js-cart-fixed-inner, #header').wrapAll('<div id="fixedHeadeGnavi" />'); 
+	$('.js-cart-fixed-inner').wrapAll('<div id="fixedHeadeGnavi" />'); 
 	$('#fixedHeadeGnavi').scrollToFixed();
 });

@@ -30,3 +30,62 @@
 		}
 	}
 }
+
+.dot-navi {
+	width: 10px;
+	position: fixed;
+	right: 80px;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 1000;
+	li {
+		margin-top: 25px;
+		position: relative;
+		&:first-child {
+			margin-top: 0;
+		}
+		a {
+			width: 8px;
+			height: 8px;
+			display: block;
+			background: $color-white;
+			border-radius: 100%;
+			-moz-transition:all 0.2s ease-out;
+			-o-transition:all 0.2s ease-out;
+			-webkit-transition:all 0.2s ease-out;
+			-ms-transition:all 0.2s ease-out;
+		}
+		p {
+			margin: 0;
+			position: absolute;
+			left: -100px;
+			top: 50%;
+			font-family: $font-josefin;
+			transform: translateY(-50%);
+			-moz-transition:all 0.2s ease-out;
+			-o-transition:all 0.2s ease-out;
+			-webkit-transition:all 0.2s ease-out;
+			-ms-transition:all 0.2s ease-out;
+			opacity: 0;
+			text-transform: uppercase;
+			color: $color-green;
+		}
+		&:hover {
+			p {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			a {
+				transform: scale(1.8);
+				background: $color-green;
+			}
+		}
+		&.active {
+			a {
+				transform: scale(1.8);
+				background: $color-green;
+			}
+		}
+	}
+}

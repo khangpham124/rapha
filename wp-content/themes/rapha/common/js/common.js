@@ -172,5 +172,3 @@ $('.js-update-info').click(function() {
 $('.js-toogle-cart').click(function() {
     $('.cart-head').slideToggle(200);
 });
-
-TweenMax.to(".dot", 0.6, { ease: Bounce.easeOut, y: '10px', yoyo: true, repeat: -1, delay: 0.4 });
