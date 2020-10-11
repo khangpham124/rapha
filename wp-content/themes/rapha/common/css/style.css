@@ -869,6 +869,17 @@ button.slick-prev {
   .nav-link:hover {
     opacity: .6; }
 
+.lang-menu li {
+  padding: 0 20px; }
+  .lang-menu li a {
+    color: #313131;
+    line-height: 1; }
+  .lang-menu li:last-child {
+    border-left: 1px solid #313131; }
+  .lang-menu li.active a {
+    font-weight: bold;
+    text-decoration: underline; }
+
 .header-link {
   color: #313131; }
   .header-link:hover {
@@ -916,6 +927,38 @@ button.slick-prev {
       .footer ul li a i {
         color: #fff; }
 
+#main-visual {
+  position: relative; }
+  #main-visual .main-cup-tea {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(80px);
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out; }
+  #main-visual .txt-draw {
+    position: absolute;
+    top: 43%;
+    left: 10%;
+    height: 200px; }
+  #main-visual .txt-love {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    height: 200px;
+    opacity: 0;
+    transform: translateY(-80px);
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out; }
+  #main-visual img {
+    line-height: 1;
+    vertical-align: bottom; }
+
 .about-section {
   background: url("../img/top/bg_about.jpg") repeat left top;
   color: #fff;
@@ -924,7 +967,8 @@ button.slick-prev {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden; }
+  overflow-x: hidden;
+  z-index: 500; }
   .about-section-wrap {
     width: 100%; }
   .about-section::before {
@@ -940,7 +984,8 @@ button.slick-prev {
 .mission-section {
   min-height: 80vh;
   position: relative;
-  color: #fff; }
+  color: #fff;
+  z-index: 500; }
   .mission-section .container {
     display: flex;
     justify-content: flex-end;
@@ -1094,6 +1139,108 @@ button.slick-prev {
   overflow: hidden; }
   .contact-section-wrap {
     width: 100%; }
+
+.anim-contain.leaf-anim {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: #fff; }
+
+.leaf-path {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* border:solid 2px grey; */
+  opacity: .7;
+  transition: opacity .25s ease-in-out; }
+
+.leaf {
+  position: absolute;
+  width: 25px;
+  height: 38px;
+  background-color: #92c83e;
+  /* background-color:#00AAD1; */
+  /* border-radius: 50px; */
+  border-radius: 75px 0px;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+  top: -19px;
+  /* -child size/2 */
+  left: 62px;
+  /* parent size/2 - child size/2 */ }
+
+.anim-contain .leaf-path:nth-of-type(odd) .leaf {
+  background-color: red; }
+
+.anim-contain .leaf-path:nth-of-type(1) {
+  animation: leaf-path 3s ease-in-out 0s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out 0s infinite;
+  -moz-animation: leaf-path 3s ease-in-out 0s infinite; }
+
+.anim-contain .leaf-path:nth-of-type(2) {
+  animation: leaf-path 3s ease-in-out .15s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out .15s infinite;
+  -moz-animation: leaf-path 3s ease-in-out .15s infinite; }
+
+.anim-contain .leaf-path:nth-of-type(3) {
+  animation: leaf-path 3s ease-in-out .30s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out .30s infinite;
+  -moz-animation: leaf-path 3s ease-in-out .30s infinite; }
+
+.anim-contain .leaf-path:nth-of-type(4) {
+  animation: leaf-path 3s ease-in-out .45s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out .45s infinite;
+  -moz-animation: leaf-path 3s ease-in-out .45s infinite; }
+
+.anim-contain .leaf-path:nth-of-type(5) {
+  animation: leaf-path 3s ease-in-out .60s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out .60s infinite;
+  -moz-animation: leaf-path 3s ease-in-out .60s infinite; }
+
+.anim-contain .leaf-path:nth-of-type(6) {
+  animation: leaf-path 3s ease-in-out .75s infinite;
+  -webkit-animation: leaf-path 3s ease-in-out .75s infinite;
+  -moz-animation: leaf-path 3s ease-in-out .75s infinite; }
+
+@keyframes leaf-path {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  10% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  80% {
+    transform: translate(-50%, -50%) rotate(360deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@-webkit-keyframes leaf-path {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  10% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  80% {
+    transform: translate(-50%, -50%) rotate(360deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
+
+@-moz-keyframes leaf-path {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  10% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  80% {
+    transform: translate(-50%, -50%) rotate(360deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg); } }
 
 #top .hideSide ul li:nth-child(1) {
   background: #e1e1e1; }

@@ -1,6 +1,14 @@
 <?php echo('<?xml version="1.0" encoding="UTF-8"?>'); ?>
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+<?php 
+include get_theme_file_path( 'lang.php' );
+if(!isset($_COOKIE['lang_web'])) {
+	$lang_web = 'en';
+} else {
+	$lang_web = $_COOKIE['lang_web'];
+}
+?>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -23,7 +31,7 @@
 <!--responsive or smartphone-->
 
 <?php include(APP_PATH."libs/argument.php"); ?>
-<title>Test</title>
+<title>RaphaTea | Boba Tea House</title>
 <meta name="description" content="<?php echo $desPage; ?>">
 <meta name="keywords" content="<?php echo $keyPage; ?>">
 

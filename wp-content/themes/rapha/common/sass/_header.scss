@@ -88,6 +88,25 @@
 	}
 }
 
+.lang-menu {
+	li {
+		padding: 0 20px;
+		a {
+			color: $color-black;
+			line-height: 1;
+		}
+		&:last-child {
+			border-left:1px solid $color-black;
+		}
+		&.active {
+			a {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
 .header-link {
 	color: $color-black;
 	&:hover {
