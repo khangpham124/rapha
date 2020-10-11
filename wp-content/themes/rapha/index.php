@@ -2,64 +2,199 @@
 include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs/head.php");
 ?>
+<link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/slick.css" media="all">
 </head>
 
 <body id="top">
 <!--===================================================-->
 
-    
-    <!--===================================================-->
-        <!--Header-->
-        <?php include(APP_PATH."libs/header.php"); ?>
-        <!--/Header-->
+    <!--Header-->
+    <?php include(APP_PATH."libs/header.php"); ?>
+    <!--/Header-->
 
-
-        <div class="container">
-
-		<svg version="1.1" id="svg-animation-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 456.9 195.5" style="enable-background:new 0 0 456.9 195.5;" xml:space="preserve" width="100%" height="100%"  >
-<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo APP_ASSETS; ?>img/other/kv_inner_catch_b_1.svg" mask="url(#clipmask)" id="shape_mask" width="100%" height="100%" ></image>
-
-<mask id="clipmask" maskUnits="objectBoundingBox">
-
-<path class="st0" d="M171.3,11.7L168,3.3l-8.8-1.5c-15.1,2.5-29.3,6.1-42.2,14.9c-5.9,4-11.7,10.3-10.4,17.3
-	c20.7,22,52.6,24.4,74.1,44c0.9,0.8,1.8,1.7,2.2,2.8c0.6,1.5,0.3,3.2-0.2,4.7c-4.3,14-19.1,17.9-31,23.4c-7,3.3-15.6,4.2-22.9,6.6
-	c-11.9,3.9-23.2,8-35.6,10.3c-14.3,2.6-28.9,3.6-43.5,3.3c-13.4-0.3-29.8,1.8-41.7-5.6c-18.1-11.2,6.9-28.8,15-36.9"/>
-<path class="st0" d="M250.9,0.9c-16.1,24.9-32.6,49.6-49.2,74.2c-4.3,6.4-8.6,12.9-10.8,20.3c17.6-7.6,34.1-16.9,50.6-26.4
-	c-4.1,9.9-8.1,19.9-9.8,30.4c10.6-5.6,20.6-12.1,30-19.4"/>
-<path class="st0" d="M297.2,60.8c-17.2,6.8-41.3,11.7-44.1,34.7c14.4,4.8,38.7-16.9,51.3-22.8c-6.7,3.4-8.4,15.9-8.8,22.4
-	c12.8-2.8,26.3-11.5,38.4-17"/>
-<path class="st0" d="M337,61c-26.3,44.8-52.7,89.7-79,134.5c0-10.8,8.7-26.3,12.2-36.6c3.8-11.4,5.7-23.7,14.5-32.2
-	c11.3-10.9,22.5-22,33.7-33c9.8-9.6,19.8-23.2,32.2-29.3c6.9-3.4,31.6-19.5,30.8-3.2c-0.7,13.2-14.4,21.2-24.9,25.3
-	c-13.6,5.4-23.5,4.7-38,3.8"/>
-<path class="st0" d="M393.3,77.4c12.8-5.6,27.1-10.4,39.1-17.3c-0.5-2.9-2.2-7.7-5.6-8.2c-2.4-0.4-9.1,3.9-11.5,4.9
-	c-7.6,3.2-15.3,6.4-21.6,11.9c-4.6,3.9-8.2,8.9-10.7,14.3c-6.6,14.7,17.2,7.8,23.4,5.8c19.7-6.3,38.6-16,57.5-24.1"/>
-	</mask>
-</svg>
-
+    <section id="main-visual">
+        <img src="<?php echo APP_ASSETS; ?>img/top/main.jpg" class="img-max">
+    </section>
+    <section id="about-us" class="about-section">
+        <div class="about-section-wrap">
+            <div class="container">
+                <h2 class="header-page">About Us</h2>
+                <h3 class="header-page-sub">“Stay focused on the end goal until you succeed.”</h3>
+                <div class="section-text section-text--blur grid--80">
+                RAPHA TEA  originated from an instant inspiration of discovering the best ingredients from the beautiful island – Taiwan. In 2017, with this spark of inspiration, we opened our first tea shop. RAPHA TEA is proud to offer a full range of premium teas! Farmed and hand picked from the high mountains of Taiwan, each cup of tea we’ve created has a unique aroma, taste and character. We firmly believe the best tea needs the best ingredients, and we want to bring all the goodness to you     by breathing a new life into the traditional tea culture.
+                </div>
+            </div>
         </div>
-        
+    </section>
+
+    <section id="mission" class="mission-section flex-box flex-box--right flex-box--aligncenter">
+        <div class="mission-section__leaf"><img src="<?php echo APP_ASSETS; ?>img/top/leaf_stroke.png" ></div>
+        <div class="grid--48 mission-section__img"><img src="<?php echo APP_ASSETS; ?>img/top/img_mission.jpg" class="img-max"></div>
+        <p class="mission-section-grid"></p>
+        <div class="container">
+            <div class="grid--45">
+                <h2 class="header-page">OUR<br>MISSION</h2>
+                <h3 class="header-page-sub">Offering the Best</h3>
+                <div class="section-text section-text--blur">
+                    <p>
+                        Accomplishment starts from action. There is an expression that goes “One minute on the stage, ten years of practice off the stage.” We did our best and never compromised on the idea of freshly brewed tea. It’s our pleasure to share the best tea with you. Serving the best drink is our faith for now and forever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="menu-section__top"><img src="<?php echo APP_ASSETS; ?>img/top/bg_leaf.png" ></div>
+        <div class="menu-section__bottom"><img src="<?php echo APP_ASSETS; ?>img/top/img_leaf_bottom.png" ></div>
+        <div class="menu-section-wrap">
+            <h2 class="header-page taC">Menu</h2>
+            <div class="container">
+                <div class="menu-section-wrap-list">
+                    <ul class="menu-section-list">
+                        <?php
+                            $args=array(
+                            'post_type' => 'menus',
+                            'child_of' => 0,
+                            'orderby' =>'ID',
+                            'order' => 'ASC',
+                            'hide_empty' => 0,
+                            'taxonomy' => 'menuscat',
+                            'number' => '0',
+                            'pad_counts' => false
+                            );
+                            $categories = get_categories($args);
+                            foreach ( $categories as $category ):
+                            $slug = $category->slug;
+                        ?>
+                        <li><a href="javascript:void(0)" class="js-tab-item" data-tab="<?php echo $slug; ?>"><?php echo $category->name; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                
+                <?php
+                    $i = 0;
+                    $args=array(
+                    'post_type' => 'menus',
+                    'child_of' => 0,
+                    'orderby' =>'ID',
+                    'order' => 'ASC',
+                    'hide_empty' => 1,
+                    'taxonomy' => 'menuscat',
+                    'number' => '0',
+                    'pad_counts' => false
+                    );
+                    $categories = get_categories($args);
+                    foreach ( $categories as $category ):
+                    $slug = $category->slug;
+                ?>
+                    <div class="menu-section-tab" id="<?php echo $slug; ?>">
+                    <ul id="cat_<?php echo $slug; ?>" <?php if($slug != 'flavored-tea') { ?>class="flex-box"<?php } ?>>
+                        <?php
+                            $wp_query = new WP_Query();
+                            $param=array(
+                            'post_type'=>'menus',
+                            'order' => 'DESC',
+                            'posts_per_page' => '-1',
+                            'tax_query' => array(
+                            array(
+                            'taxonomy' => 'menuscat',
+                            'field' => 'slug',
+                            'terms' => $slug
+                            )
+                            )
+                            );
+                            $wp_query->query($param);
+                            if($wp_query->have_posts()):while($wp_query->have_posts()) : $wp_query->the_post();
+                            $thumbnail = get_post_thumbnail_id($post->ID);
+                            $thumb_url = wp_get_attachment_image_src($thumbnail,'full');
+                            $i++;
+                        ?>
+                        <li class="<?php if($slug != 'flavored-tea') { ?>grid--25<?php } ?>">
+                            <?php if($thumb_url) { ?>
+                            <p class="<?php if($i%3==1) { ?>mt--0 <?php } ?><?php if(($i==2)||($i%2==1)&&($i>1)) {?>mt--60<?php } ?> <?php if(($i%3 == 0)&&($i > 1)) {?>mt--120<?php } ?>"><img src="<?php echo $thumb_url[0]; ?>" alt="" ></p>
+                            <?php } ?>
+                            <p><?php if($slug != 'flavored-tea') { ?><i class="fa fa-leaf" aria-hidden="true"></i><?php } ?><?php the_title(); ?></p>
+                        </li>
+                        <?php endwhile;endif; ?>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <p class="taC mt--50"><a href="" class="btn-page">DISCOVER MENU</a></p>
+        </div>    
+    </section>
+
+    <section id="location" class="location-section" >
+        <div class="location-section-wrap">
+            <div class="container">
+                <h2 class="header-page">Locations</h2>
+                <h3 class="header-page-sub">Lorem ipsum dolor sit amet</h3>
+                <div class="section-text grid--60">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit eros Leo, nec aliquam nunc mattis imperdiet. Duis luctus dolor a eros vulputate aliquam. Donec a ligula ut dui lacinia mattis nec eu quam. Ut vitae pretium mauris, ac sagittis diam. Donec tempus, leo ac ornare efficitur, dui ante auctor nisi, eget ultrices orci orci vel velit. Donec ultricies gravida tellus vel rhoncus. Maecenas tristique dapibus sem, quis sagittis dui maximus tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi.
+                </div>
+                <a href="" class="btn-page">SEE MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-section-wrap">
+                <div class="container flex-box flex-box--between">
+                    <div class="grid--40"><img src="<?php echo APP_ASSETS; ?>img/top/img_cup_footer.png" ></div>
+                    <div class="contact-section-form grid--55">
+                        <h2 class="header-page">Contact</h2>
+                        <form>
+                            <table class="table-form-page">
+                                <tr>
+                                    <th>Your name</th>
+                                    <td><input class="input-page" value="" id="name" type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td><input class="input-page" value="" id="email" type="email"></td>
+                                </tr>
+                                <tr>
+                                    <th>Phone number</th>
+                                    <td><input class="input-page" value="" id="phone" type="phone"></td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td><input class="input-page" value="" id="address" type="address"></td>
+                                </tr>
+                                <tr>
+                                    <th>Message</th>
+                                    <td><textarea class="textarea-page" id="message"></textarea></td>
+                                </tr>
+                            </table>
+                            <div class="taR">
+                                <button class="btn-page">SEND<i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </section>
 
 
-        <!--Footer-->
-        <?php include(APP_PATH."libs/footer.php"); ?>
-        <!--/Footer-->
+    <!--Footer-->
+    <?php include(APP_PATH."libs/footer.php"); ?>
+    <!--/Footer-->
         
     <script src="<?php echo APP_ASSETS; ?>js/vivus.js"></script>
     <script>
-        var st0 = document.querySelectorAll('.st0');
-        var animation_shape = function(){
-        new Vivus('svg-animation-shape', {type: 'scenario-sync',duration: 12,forceRender: false ,animTimingFunction:Vivus.EASE},function(){
-            setTimeout(function(){
+        // var st0 = document.querySelectorAll('.st0');
+        // var animation_shape = function(){
+        // new Vivus('svg-animation-shape', {type: 'scenario-sync',duration: 12,forceRender: false ,animTimingFunction:Vivus.EASE},function(){
+        //     setTimeout(function(){
                 
-                for(var i =0;i < st0.length; i ++)
-                    st0[i].removeAttribute('style');
-                animation_shape();
-            },10000000000)
-        });        
-        }
-        animation_shape();
-
+        //         for(var i =0;i < st0.length; i ++)
+        //             st0[i].removeAttribute('style');
+        //         animation_shape();
+        //     },10000000000)
+        // });        
+        // }
+        // animation_shape();
     </script>
 
 </body>

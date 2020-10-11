@@ -16,8 +16,13 @@
 	}
 }
 
-body {
+body.dashboard {
 	font-family: $font-roboto;
+}
+
+
+body {
+	font-family: $font-barlow;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -62,14 +67,43 @@ button {
 
 
 .container {
-	max-width: 1200px;
+	max-width: 1080px;
 	padding: 0 15px;
 	margin: 0 auto;
 }
 
-// .header-page {
-	
-// }
+.header-page {
+	font-size: 80px;
+	font-family: $font-josefin;	
+	text-transform: uppercase;
+	&-sub {
+		font-size: 30px;
+		font-family: $font-barlow;
+		font-weight: 700;
+	}
+}
+
+.vn {
+	.mission-section {
+		.header-page {
+			font-size: 50px;
+		}
+	}
+}
+
+.section-text {
+	font-size: 15px;
+	font-family: $font-barlow;
+	font-weight: 300;
+	line-height: 1.7;
+	.header-page-sub + & {
+		margin-top: 55px;
+	}
+	&--blur {
+		opacity: .5;
+	}
+}
+
 
 .breadcrumb {
 	display: flex;
@@ -193,7 +227,7 @@ button {
 		margin-top: auto;
 	}
 	&--0 {
-		margin-top: 0;
+		margin-top: 0 !important;
 	}
 	&--10 {
 		margin-top: 10px;
@@ -227,6 +261,14 @@ button {
 	}
 	&--50 {
 		margin-top: 50px;
+		@media (max-width: 767px) {
+			&--mb {
+				margin-top: 20px;
+			}
+		}
+	}
+	&--60 {
+		margin-top: 60px;
 		@media (max-width: 767px) {
 			&--mb {
 				margin-top: 20px;
@@ -300,6 +342,9 @@ button {
 .taC {
 	text-align: center;
 }
+.taR {
+	text-align: right;
+}
 
 .tbl-page {
 	width: 100%;
@@ -322,26 +367,54 @@ button {
 }
 
 .input-page {
-	height: 35px;
-	border-radius: 3px;
+	height: 45px;
 	width: 100%;
 	border: 1px solid $color-border;
 	padding: 10px;
 	outline: none;
+	background: transparent;
 	&-radio {
 		margin-right: 10px;
 	}
 }
 
+.textarea-page {
+	border: 1px solid $color-border;
+	background: transparent;
+	height: 150px;
+	width: 100%;
+	padding: 10px;
+}
+
+table.table-form-page {
+	width: 100%;
+	border-collapse: collapse;
+	font-family: $font-josefin;	
+	tr {
+		td {
+			padding: 15px 0;
+		}
+		th {
+			text-align: left;
+			text-transform: uppercase;
+		}
+	}
+}
+
 .btn-page {
-	background: $color-blue-dark;
+	background: $color-green;
 	color: $color-white;
-	height: 30px;
-	line-height: 30px;
+	height: 50px;
+	line-height: 50px;
 	display: inline-block;
 	text-align: center;
 	border-radius: 3px;
-	padding: 0 15px;
+	padding: 0 30px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	i {
+		margin-left: 30px;
+	}
 	&.disable {
 		opacity: .3;
 		pointer-events: none;
@@ -352,6 +425,9 @@ button {
 		color: $color-blue-dark;
 		padding: 5px 15px;
 		border-radius: 4px;
+	}
+	.section-text + & {
+		margin-top: 70px;
 	}
 }
 
@@ -382,6 +458,9 @@ button {
 	}
 	&--40 {
 		width: 40%;
+	}
+	&--45 {
+		width: 45%;
 	}
 	&--50 {
 		width: 50%;
@@ -421,61 +500,57 @@ button {
 
 .slick-arrow {
     border: none;
-    background: rgba(0,0,0,.2);
-    border-radius: 100%;
-    font-size: 0;
+    font-size: 15px;
     position: absolute;
     z-index: 500;
     outline: none;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+	height: 20px;
+	background: none;
+	cursor: pointer;
+	&:hover {
+		opacity: .6;
+	}
 }
 
 button.slick-next {
-    right: -30px;
+    right: -80px;
 	top: 45%;
+	&::before {
+		content: '';
+		background: url('../img/top/arrow_next.svg') no-repeat right top;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -5px;
+		width: 20px;
+		height: 10px;
+	}
 	@media (max-width: 767px) {
 		right: 0;
 	}
 }
 
 button.slick-prev {
-    left: -30px;
+	width: 120px;
+    left: -80px;
 	top: 45%;
+	&::before {
+		content: '';
+		background: url('../img/top/arrow_prev.svg') no-repeat right top;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -5px;
+		width: 20px;
+		height: 10px;
+	}
 	@media (max-width: 767px) {
 		left: 0;
 	}
 }
 
 
-.slick-prev:before {
-    content: "";
-	position: absolute;
-	left: 20px;
-	top: 33%;
-	width: 16px;
-	height: 16px;
-	border-left: 2px solid #fff;
-	border-top: 2px solid #fff;
-	-moztransform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-.slick-next:before {
-    content: "";
-	position: absolute;
-    right: 20px;
-    top: 33%;
-	width: 16px;
-	height: 16px;
-	border-left: 2px solid #fff;
-	border-top: 2px solid #fff;
-	-moztransform: rotate(135deg);
-	-webkit-transform: rotate(135deg);
-	-ms-transform: rotate(135deg);
-	transform: rotate(135deg);
-}
 
 .text-align {
 	&--center {
@@ -561,6 +636,12 @@ button.slick-prev {
 	img {
 		height: 45px;
 	}
+}
+
+.ontop-button {
+	position: fixed;
+	right: 30px;
+	bottom: 60px;
 }
 
 @media only screen and (min-width: 768px) {

@@ -23,7 +23,7 @@
 <!--responsive or smartphone-->
 
 <?php include(APP_PATH."libs/argument.php"); ?>
-<title><?php echo $titlepage; ?></title>
+<title>Test</title>
 <meta name="description" content="<?php echo $desPage; ?>">
 <meta name="keywords" content="<?php echo $keyPage; ?>">
 
@@ -31,21 +31,21 @@
 <meta property="og:title" content="<?php echo $titlepage; ?>">
 <meta property="og:type" content="website">
 <meta property="og:url" content="<?php echo 'http://';echo $_SERVER["SERVER_NAME"];echo $_SERVER["SCRIPT_NAME"];echo $_SERVER["QUERY_STRING"]; ?>">
-<meta property="og:image" content="<?php echo APP_URL; ?>common/img/other/fb_image.jpg">
+<meta property="og:image" content="<?php echo APP_ASSETS; ?>img/other/fb_image.jpg">
 <meta property="og:site_name" content="">
 <meta property="og:description" content="<?php echo $desPage; ?>">
 <meta property="fb:app_id" content="">
 <!--/facebook-->
 
 <!--css-->
-<link rel="stylesheet" href="<?php echo APP_URL; ?>common/css/style.css" media="all">
+<link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/style.css" media="all">
 
 <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wtf-forms.css'>
 <!--/css-->
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;700&family=Josefin+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--favicons-->
-<link rel="icon" href="<?php echo APP_URL; ?>common/img/icon/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="<?php echo APP_ASSETS; ?>img/icon/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">

@@ -7,7 +7,7 @@
                 <div class="nav-bar--right flex-box">
                     <div class="wrap-form">
                         <form action="<?php echo APP_URL; ?>tracking" method="post">
-                            <input class="input-page" placeholder="Nhập mã đơn hàng" name="idBooking">
+                            <input class="input-page" placeholder="Tracking your order" name="idBooking">
                             <button><i class="fa fa-search" aria-hidden="true"></i></a></button>
                         </form>                        
                     </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="cart-head">
                 <ul id='cart-head' class="list-cart">
-                Chưa có sản phẩm nào
+                There are no items in your cart
                 </ul>
                 <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
             </div>

@@ -259,7 +259,7 @@ function my_custom_menus()
     'capability_type' => 'post',
     'hierarchical' => false,
     'menu_position' => 5,
-    'supports' => array('title'),
+    'supports' => array('title','thumbnail'),
     'has_archive' => true
   );
   register_post_type('menus',$args);
