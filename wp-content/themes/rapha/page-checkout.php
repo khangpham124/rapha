@@ -3,6 +3,11 @@
 include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
+<script>
+    if(!localStorage.getItem('minicart')) {
+    window.location.href = 'https://teddycoder.com/projects/rapha-tea/dashboard';
+    }
+</script>
 </head>
 
 <body id="checkout" class="dashboard">
@@ -62,6 +67,15 @@ include(APP_PATH."libs-user/head.php");
                                         </select>
                                         <span class="fa fa-sort-desc"></span>
                                     </div>
+
+                                    <div class="toggleSection">
+                                        <form method="post" action="" id="form-address">
+                                            <input type='text' class="input-page mt--10" name="address" id="address" placeholder="New address">
+                                            <input type="hidden" name="iduser" id="iduser" value="<?php echo $userID; ?>" >
+                                            <a href="javascript:void(0)" class="btn-page js-add-address mt--30" data-action="<?php echo APP_URL; ?>data/addAddress.php">Add</a>
+                                        </form>
+                                    </div>
+                                    <a href="javascript:void(0)" class="js-toogle-click text-link mt--10"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add new address</p>
                                 </td>
                             </tr>
                             <tr>

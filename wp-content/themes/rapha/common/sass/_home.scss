@@ -260,7 +260,7 @@ body {
         }
     }
     &-tab {
-        margin-top:50px;
+        margin-top:30;
         display: none;
         i {
             color: $color-green;
@@ -474,5 +474,24 @@ body {
     }
     #controls {
         overflow-y: auto;
+    }
+    ::-webkit-scrollbar-track
+    {
+        display:none;
+        -webkit-box-shadow: inset 0 0 6px rgba(146,200,62,.5);
+        background: rgba(146,200,62,.5);
+    }
+    ::-webkit-scrollbar
+    {
+        width: 6px;
+        background: rgba(146,200,62,.5);
+        display:none;
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+        background-color: red;
+        background: red;
+        display:none;
     }
 }

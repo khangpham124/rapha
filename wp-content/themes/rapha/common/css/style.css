@@ -488,6 +488,12 @@ button {
     .mt--20--mb {
       margin-top: 20px; } }
 
+.mt--25 {
+  margin-top: 25px; }
+  @media (max-width: 767px) {
+    .mt--25--mb {
+      margin-top: 20px; } }
+
 .mt--30 {
   margin-top: 30px; }
   @media (max-width: 767px) {
@@ -640,7 +646,8 @@ table.table-form-page {
   background: #07407e;
   height: 35px;
   line-height: 35px;
-  font-size: 12px; }
+  font-size: 12px;
+  padding: 0 15px; }
 
 .dashboard .input-page {
   height: 35px;
@@ -855,23 +862,27 @@ button.slick-prev {
 
 .slick-dots {
   position: absolute;
-  bottom: 10%;
-  right: 50px; }
+  bottom: 80px;
+  right: 50px;
+  z-index: 1500; }
   .slick-dots li {
     display: inline-block;
-    margin-right: 10px; }
+    margin-right: 10px;
+    opacity: .6; }
     .slick-dots li:last-child {
       margin-right: 0; }
-    .slick-dots li .slick-active button {
+    .slick-dots li button {
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      outline: none;
+      border-radius: 100%;
+      background: #052026;
+      opacity: .2; }
+    .slick-dots li.slick-active button {
       opacity: 1; }
-  .slick-dots button {
-    width: 15px;
-    height: 15px;
-    font-size: 0;
-    outline: none;
-    border-radius: 100%;
-    background: #052026;
-    opacity: .2; }
+      .slick-dots li.slick-active button button {
+        background: #92c83e; }
 
 .header {
   padding: 20px 0; }
@@ -1319,7 +1330,7 @@ button.slick-prev {
         .menu-section-list a {
           font-size: 13px; } }
   .menu-section-tab {
-    margin-top: 50px;
+    margin-top: 30;
     display: none; }
     .menu-section-tab i {
       color: #92c83e;
@@ -1519,6 +1530,21 @@ button.slick-prev {
 
 #location_page #controls {
   overflow-y: auto; }
+
+#location_page ::-webkit-scrollbar-track {
+  display: none;
+  -webkit-box-shadow: inset 0 0 6px rgba(146, 200, 62, 0.5);
+  background: rgba(146, 200, 62, 0.5); }
+
+#location_page ::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(146, 200, 62, 0.5);
+  display: none; }
+
+#location_page ::-webkit-scrollbar-thumb {
+  background-color: red;
+  background: red;
+  display: none; }
 
 #top .hideSide ul li:nth-child(1) {
   background: #e1e1e1; }

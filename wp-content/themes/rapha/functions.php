@@ -206,6 +206,62 @@ function my_custom_product()
   register_post_type('product',$args);
 }
 
+add_action('init', 'my_custom_purchase_product');
+function my_custom_purchase_product()
+{
+  $labels = array(
+    'name' => _x('Purchase Product', 'post type general name'),
+    'singular_name' => _x('Purchase Product', 'post type singular name'),
+    'add_new' => _x('Add Purchase  Product', 'news'),
+    'add_new_item' => __('Add new item'),
+    'edit_item' => __('Edit Product'),
+    'new_item' => __('New Item'),
+    'view_item' => __('View Item'),
+    'search_staff' => __('sample記事を探す'),
+    'not_found' =>  __('Not found'),
+    'not_found_in_trash' => __('Not found'),
+    'parent_item_colon' => ''
+  );
+  $args = array(
+    'labels' => $labels,
+    'menu_icon'   => 'dashicons-screenoptions',
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => 5,
+    'supports' => array('title'),
+    'has_archive' => true
+  );
+  register_post_type('purchase_product',$args);
+}
+
+add_action ('init','create_purchasecat_taxonomy','0');
+function create_purchasecat_taxonomy () {
+	$taxonomylabels = array(
+	'name' => _x('purchasecat','post type general name'),
+	'singular_name' => _x('purchasecat','post type singular name'),
+	'search_items' => __('purchasecat'),
+	'all_items' => __('purchasecat'),
+	'parent_item' => __( 'Parent Cat' ),
+	'parent_item_colon' => __( 'Parent Cat:' ),
+	'edit_item' => __('Product Categories'),
+	'add_new_item' => __('Add new'),
+	'menu_name' => __( 'categories' ),
+	);
+	$args = array(
+	'labels' => $taxonomylabels,
+	'hierarchical' => true,
+	'has_archive' => true,
+	'show_ui' => true,
+	 'query_var' => true,
+	 'rewrite' => array( 'slug' => 'purchasecat' )
+	);
+	register_taxonomy('purchasecat','purchase_product',$args);
+}
 
 add_action ('init','create_productcat_taxonomy','0');
 function create_productcat_taxonomy () {
