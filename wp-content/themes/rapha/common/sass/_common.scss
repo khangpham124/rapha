@@ -49,9 +49,6 @@ a {
 }
 
 p {
-	font-size: 16px;
-	font-weight: $font-regular;
-	line-height: 30px;
 	margin: 0;
 }
 
@@ -81,6 +78,12 @@ button {
 		font-family: $font-barlow;
 		font-weight: 700;
 	}
+	@media (max-width: 767px) { 
+		font-size: 50px;
+		&-sub {
+			font-size: 16px;
+		}
+	}
 }
 
 .vn {
@@ -98,6 +101,9 @@ button {
 	line-height: 1.7;
 	.header-page-sub + & {
 		margin-top: 55px;
+		@media (max-width: 767px) { 
+			margin-top: 30px;
+		}
 	}
 	&--blur {
 		opacity: .5;
@@ -310,7 +316,7 @@ button {
 	&__mb {
 		@media (max-width: 767px) {
 			&--0 {
-				margin: 0;
+				margin: 0 !important;
 			}
 			&--20 {
 				margin-top: 20px;
@@ -343,7 +349,7 @@ button {
 	text-align: center;
 }
 .taR {
-	text-align: right;
+	text-align: right !important;
 }
 
 .tbl-page {
@@ -393,10 +399,20 @@ table.table-form-page {
 	tr {
 		td {
 			padding: 15px 0;
+			@media (max-width: 767px) {
+				width: 100%;
+				display: block;
+				padding-bottom: 20px;
+			}
 		}
 		th {
 			text-align: left;
 			text-transform: uppercase;
+			@media (max-width: 767px) {
+				width: 100%;
+				font-size: 15px;
+				display: block;
+			}
 		}
 	}
 }
@@ -425,10 +441,41 @@ table.table-form-page {
 		color: $color-blue-dark;
 		padding: 5px 15px;
 		border-radius: 4px;
+		line-height: 35px;
+		height: 35px;
 	}
 	.section-text + & {
 		margin-top: 70px;
 	}
+}
+
+.dashboard {
+	.btn-page {
+		background: $color-blue-dark;
+		height: 35px;
+		line-height: 35px;
+		font-size: 12px;
+	}
+	.input-page {
+		height: 35px;
+		width: 100%;
+		border: 1px solid $color-thin-gray;
+		padding: 10px;
+		outline: none;
+		background: transparent;
+		padding: 0 15px;
+		text-align: center;
+		&-radio {
+			margin-right: 10px;
+		}
+	}	
+	.header {
+		padding-right: 30px;
+	}
+}
+
+#idBooking {
+	background: $color-white;
 }
 
 .grid {
@@ -473,6 +520,9 @@ table.table-form-page {
 	}
 	&--60 {
 		width: 60%;
+	}
+	&--70 {
+		width: 70%;
 	}
 	&--75 {
 		width: 75%;
@@ -570,7 +620,8 @@ button.slick-prev {
 }
 
 .popup {
-	width: 70%;
+	display: none;
+	width: 50%;
 	position: fixed;
 	left: 50%;
 	top: 50%;
@@ -642,6 +693,51 @@ button.slick-prev {
 	position: fixed;
 	right: 30px;
 	bottom: 60px;
+	z-index: 1000;
+}
+
+.text {
+	&-link {
+		display: inline-block;
+		color: $color-blue-dark;
+	}
+	&-red {
+		color: $color-error;
+	}
+}
+
+.toggleSection {
+	display: none;
+}
+
+#gmap-menu {
+	height: 60vh;
+	color: $color-black;
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: 10%;
+	right: 50px;
+	li {
+		display: inline-block;
+		margin-right: 10px;
+		&:last-child {
+			margin-right: 0;
+		}
+		.slick-active button {
+			opacity: 1;
+		}
+	}
+	button {
+		width: 15px;
+		height: 15px;
+		font-size: 0;
+		outline: none;
+		border-radius: 100%;
+		background: #052026; 
+		opacity: .2;
+	}
 }
 
 @media only screen and (min-width: 768px) {

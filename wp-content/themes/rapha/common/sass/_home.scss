@@ -1,5 +1,9 @@
 #main-visual {
-    position: relative;
+    .slide-container {
+        li {
+            position: relative;
+        }
+    }
     .main-cup-tea {
         position: absolute;
         bottom: 0;
@@ -10,6 +14,7 @@
         -o-transition:all 0.4s ease-out;
         -webkit-transition:all 0.4s ease-out;
         -ms-transition:all 0.4s ease-out;
+        height: auto;
     }
     .txt-draw {
         position: absolute;
@@ -32,6 +37,30 @@
     img {
         line-height: 1;
         vertical-align: bottom;
+    }
+    .main-img {
+        height: 100vh;
+    }
+    @media (max-width: 767px) {
+        height: 100vh;
+        .txt-love {
+            width: 90%;
+            left: 5%;
+            top: 23%;
+            height: 150px;
+        }
+        .txt-draw {
+            height: 150px;
+            top: 33%;
+            left: 5%;
+            width: 90%;
+        }
+    }
+}
+
+body {
+    @media (max-width: 767px) {
+        overflow-x: hidden;
     }
 }
 
@@ -58,6 +87,9 @@
         background: url('../img/top/bg_text.png') no-repeat left center;
         background-size: 100% auto;
     }
+    @media (max-width: 767px) {
+        padding: 50px 0;
+    }
 }
 
 .mission-section {
@@ -65,6 +97,9 @@
     position: relative;
     color: $color-white;
     z-index: 500;
+    @media (max-width: 767px) {
+        padding-bottom: 40px;
+    }
     .container {
         display: flex;
         justify-content: flex-end;
@@ -83,6 +118,14 @@
         width: 48%;
         transform: translateY(-50%);
         z-index: 300;
+        @media (max-width: 767px) {
+            position: relative;
+            top: inherit;
+            left: inherit;
+            width: 100% !important;
+            transform: inherit;
+            margin-bottom: 40px;
+        }
     }
     &__leaf {
         position: absolute;
@@ -99,6 +142,9 @@
         position: absolute;
         top: 0;
         right: 0;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
     }
     &::after {
         content: '';
@@ -108,6 +154,9 @@
         position: absolute;
         top: 0;
         left: 0;
+        @media (max-width: 767px) {
+            display: none;
+        }
     } 
     &-grid {
         position: absolute;
@@ -129,6 +178,9 @@
     position: relative;
     overflow: hidden;
     padding: 120px 0;
+    @media (max-width: 767px) {
+        padding: 50px 0px;
+    }
     &-wrap {
         width: 100%;
     }
@@ -136,6 +188,11 @@
         top: 0;
         left: -5%;
         position: absolute;
+        @media (max-width: 767px) {
+            img {
+                height: 150px;
+            }
+        }
     }
     &__bottom {
         position: absolute;
@@ -190,11 +247,16 @@
                     left:0;
                 }
             }
+            @media (max-width: 767px) {
+                padding: 0 15px 10px;
+            }
         }
         a {
             color: $color-black;  
             font-size: 20px;
-
+            @media (max-width: 767px) {
+                font-size: 13px;
+            }
         }
     }
     &-tab {
@@ -236,6 +298,9 @@
     &-wrap {
         width: 100%;
     }
+    @media (max-width: 767px) {
+        padding: 50px 0px;
+    }
 }
 
 .contact-section {
@@ -253,6 +318,9 @@
     }
     .input-page {
         color: $color-white;
+    }
+    @media (max-width: 767px) {
+        padding: 50px 0px;
     }
 }
 
@@ -347,4 +415,64 @@
 	10% {transform: translate(-50%,-50%) rotate(0deg);}
 	80% {transform: translate(-50%,-50%) rotate(360deg);}
 	100% {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+#location_page {
+    .about-section {
+        min-height: 100vh;
+    }
+    .nav-link {
+        color: $color-white !important;
+    }
+    .lang-menu {
+        a {
+            color: $color-white !important;
+        }
+        li:last-child {
+            border-left: 1px solid $color-white;
+        }
+    }
+    .header-link {
+        color: $color-white !important;
+    }
+    .wrap_controls {
+        font-family: $font-josefin;
+        ul {
+            li {
+                margin-top: 15px;
+                padding-right: 15px;
+                &.active {
+                    background: rgba(146,200,62,.5);
+                }
+                &:first-child {
+                    margin-top: 0;
+                }
+                a {
+                    color: $color-white !important;
+                    font-weight: bold !important;
+                    font-size: 18px !important;
+                    p {
+                        color: $color-error;
+                    }
+                    em {
+                        font-size: 12px;
+                        font-style: normal;
+                        display: inline-block;
+                        margin: 5px 0;
+                        font-weight: normal !important;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        max-width: 1200px;
+    }
+    .wrap-map {
+        max-height: 60vh;
+    }
+    #controls {
+        overflow-y: auto;
+    }
 }

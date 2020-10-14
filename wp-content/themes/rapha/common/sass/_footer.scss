@@ -6,10 +6,16 @@
 	.copyright {
 		opacity: .5;
 		line-height: 50px;
+		@media (max-width: 767px) {
+			font-size: 14px;
+		}
 	}
 	ul {
 		li {
 			margin: 0 25px;
+			@media (max-width: 767px) {
+				margin: 0 15px;
+			}
 			.icon {
 				display: inline-block;
 				width: 50px;
@@ -19,6 +25,11 @@
 				text-align: center;
 				line-height: 50px;
 				margin-right: 20px;
+				@media (max-width: 767px) {
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+				}
 			}
 			a {
 				i {
@@ -26,6 +37,9 @@
 				}
 				color: $color-white;
 				font-size: 15px;
+				@media (max-width: 767px) {
+					font-size: 13px;
+				}
 			}
 		}
 	}
@@ -87,5 +101,8 @@
 				background: $color-green;
 			}
 		}
+	}
+	@media (max-width: 767px) {
+		display: none;
 	}
 }
