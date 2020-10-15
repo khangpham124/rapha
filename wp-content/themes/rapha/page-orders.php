@@ -22,7 +22,7 @@ include(APP_PATH."libs-user/head.php");
                         'posts_per_page' => '-1',
                         'post_type' => 'booking',
                         'post_status' => 'publish',
-                        'order' => 'DESC',
+                        'order' => 'ASC',
                         'meta_query' => array(
                             array(
                             'key' => 'userid',

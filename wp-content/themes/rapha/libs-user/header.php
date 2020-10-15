@@ -7,7 +7,7 @@
                 <div class="nav-bar--right flex-box">
                     <div class="wrap-form">
                         <form action="<?php echo APP_URL; ?>tracking" method="post">
-                            <input class="input-page" placeholder="Tracking your order" name="idBooking">
+                            <input class="input-page" placeholder="Tracking your order" id="idBooking" name="idBooking">
                             <button><i class="fa fa-search" aria-hidden="true"></i></a></button>
                         </form>                        
                     </div>

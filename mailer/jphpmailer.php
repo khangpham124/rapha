@@ -1,4 +1,5 @@
 <?php
+include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 ####################################################################
 #
 # ◇◇◇◇◇◇◇◇◇◇◇ JPHPMailer - PHPMailer Japanese Edition
@@ -12,7 +13,7 @@
 ####################################################################
 
 //PHPMailerを読み込む
-require("./phpmailer/class.phpmailer.php");
+require(LOAD_PATH."/mailer/phpmailer/class.phpmailer.php");
 
 /**
  * JPHPMailer - PHPMailer Japanese Edition

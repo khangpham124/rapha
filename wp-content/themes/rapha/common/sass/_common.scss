@@ -147,6 +147,9 @@ button {
 	&--18 {
 		font-size: 18px;
 	}
+	&--24 {
+		font-size: 24px;
+	}
 }
 
 .flex-box {
@@ -753,6 +756,12 @@ button.slick-prev {
 		}
 	}
 	
+}
+
+.min-heigt {
+	&-70 {
+		min-height: 70vh;
+	}
 }
 
 @media only screen and (min-width: 768px) {

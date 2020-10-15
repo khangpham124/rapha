@@ -194,6 +194,7 @@
         overflow: hidden;
         margin-top: 30px;
         li {
+            align-items: center;
             h4 {
                 position: relative;
                 a {
@@ -274,10 +275,12 @@
             }
         }
         &-name {
-            width: 80%;
+            width: 60%;
+            font-size: 14px;
         }
         &-quantity {
-            width:10%;
+            width: 22%;
+            font-size: 14px;
         }
     }
     .numbCart {

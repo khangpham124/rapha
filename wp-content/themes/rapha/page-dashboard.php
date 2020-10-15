@@ -46,7 +46,7 @@ include(APP_PATH."libs-user/head.php");
                            $wp_query = new WP_Query();
                             $param=array(
                             'post_type'=>'product',
-                            'order' => 'DESC',
+                            'order' => 'ASC',
                             'posts_per_page' => '-1',
                             'tax_query' => array(
                             array(

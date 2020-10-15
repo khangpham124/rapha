@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/rapha/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 
 $username = $_POST['username'];
@@ -17,9 +17,14 @@ $pw = md5($_POST['password']);
 	if($numb_result > 0) {
 		while($wp_query->have_posts()) :$wp_query->the_post();
 			$username = $post->post_title;
+			$userID = $post->ID;
 			$fullname = get_field('fullname');
 			$pass_real = get_field('password');
 			if($pass_real==$pw) {
+				$token = get_field('token');
+				if($token == '') {
+					update_field('token', generateRandomString() , $userID);
+				}
 				setcookie('login_cookies', $username, time() + (86400 * 30), "/");
 				setcookie('name_cookies', $fullname, time() + (86400 * 30), "/");
 				header('Location:'.APP_URL_USER);

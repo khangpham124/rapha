@@ -21,15 +21,15 @@ include(APP_PATH."libs-user/head.php");
             <div class="main-content">
                 <div class="flex-box flex-box--between">
                     <div class="blockPage blockPage--full grid--48">
-                        <h2 class="h2_page">Chi tiết đơn hàng</h2>
+                        <h2 class="h2_page">Order Detail</h2>
                         <div id="list-products" class="mt--30">
                             <table class="table-page">
                                 <thead>
                                     <tr>
-                                        <td>Sản phẩm</td>
-                                        <td>Số lượng</td>
-                                        <td>Đơn giá</td>
-                                        <td>Thành tiền</td>
+                                        <td>Products</td>
+                                        <td>Quantity</td>
+                                        <td>Price</td>
+                                        <td>Total</td>
                                         <td>Action</td>
                                     </tr>
                                 </thead>
@@ -40,7 +40,7 @@ include(APP_PATH."libs-user/head.php");
                         </div>
                     </div>
                     <div class="blockPage blockPage--full grid--48">
-                        <h2 class="h2_page">Thông tin đặt hàng</h2>
+                        <h2 class="h2_page">Order Information</h2>
                         <table class="table-page mt--30">
                             <tr>
                                 <td>Fullname</td>
@@ -77,19 +77,18 @@ include(APP_PATH."libs-user/head.php");
                                     </div>
                                     <a href="javascript:void(0)" class="js-toogle-click text-link mt--10"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add new address</p>
                                 </td>
-                            </tr>
+                   </tr>
                             <tr>
                                 <td>Note</td>
                                 <td>
                                     <textarea id="noted" class="input-page"></textarea>
                                 </td>
                         </table>
-                        <em class="mt--20 text-note">Bạn có thể thêm địa chỉ giao hàng trong mục 'Sổ địa chỉ'</em>
                     </div>
                 </div>
                 <div class="mt--30">
-                    <a href="<?php echo APP_URL; ?>dashboard" class="btn-page">Quay lại</a>
-                    <a href="javascript:void(0)" class="btn-page js-get-booking">Đặt hàng</a>
+                    <a href="<?php echo APP_URL; ?>dashboard" class="btn-page">Back</a>
+                    <a href="javascript:void(0)" class="btn-page js-get-booking">Order</a>
                 </div>
             </div>
         </div>

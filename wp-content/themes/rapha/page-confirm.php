@@ -20,8 +20,8 @@ include(APP_PATH."libs-user/head.php");
                 <div class="confirm-box">
                     <i class="fa fa-check-circle" aria-hidden="true"></i>
                     <p>Bạn đã đặt hàng thành công , vui lòng theo dõi đơn hàng trong mục "Quản lý đơn hàng"</p>
-                    <p>Hệ< thống sẽ tự động chuyển về trang chủ sau 3 giây</p>
-                    <a href="<?php echo APP_URL; ?>dashboard" class="btn-page mt--30">Trang chủ</a>
+                    <p>Hệ thống sẽ tự động chuyển về trang chủ sau 3 giây</p>
+                    <a href="<?php echo APP_URL; ?>dashboard" class="btn-page mt--30">Go to Dashboard</a>
                 </div>
                 </div>
                 
