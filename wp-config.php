@@ -17,16 +17,17 @@
  *
  * @package WordPress
  */
+define( 'WP_DEBUG', true );
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define('DB_NAME', 'rapha');
+define('DB_NAME', 'teddycoder_rapha');
 
 /** Username của database */
-define('DB_USER', 'root');
+define('DB_USER', 'teddycoder_admin');
 
 /** Mật khẩu của database */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'Aa120489');
 
 /** Hostname của database */
 define('DB_HOST', 'localhost');

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<title><![CDATA[RAP21919]]></title>
+		<user><![CDATA[219]]></user>
+		<fullname><![CDATA[Khang Deve]]></fullname>
+		<phone><![CDATA[123455678]]></phone>
+		<email><![CDATA[khang.pham@navigosgroup.com]]></email>
+		<orderdetail_name_pro><![CDATA[Ceylon Black Tea Leaf  * 904,Oolong Tea Leaf,CALAMONDIN FLAVOURED SYRUP]]></orderdetail_name_pro>
+		<orderdetail_quantity><![CDATA[6,2,2]]></orderdetail_quantity>
+		<orderdetail_price><![CDATA[370,540,79]]></orderdetail_price>
+		<total><![CDATA[3458]]></total>
+		<status><![CDATA[confirm]]></status>
+		<orderdate><![CDATA[04-10-2020 09:01:29]]></orderdate>
+		<address><![CDATA[abc xyz]]></address>
+		<note><![CDATA[test]]></note>
+	</node>
+	<node>
+		<title><![CDATA[RAP21949]]></title>
+		<user><![CDATA[219]]></user>
+		<fullname><![CDATA[Khang Deve]]></fullname>
+		<phone><![CDATA[123455678]]></phone>
+		<email><![CDATA[khang.pham@navigosgroup.com]]></email>
+		<orderdetail_name_pro><![CDATA[Lychee Jelly]]></orderdetail_name_pro>
+		<orderdetail_quantity><![CDATA[2]]></orderdetail_quantity>
+		<orderdetail_price><![CDATA[60]]></orderdetail_price>
+		<total><![CDATA[120]]></total>
+		<status><![CDATA[progress]]></status>
+		<orderdate><![CDATA[02-10-2020 09:10:00]]></orderdate>
+		<address><![CDATA[abc xyz]]></address>
+		<note><![CDATA[]]></note>
+	</node>
+</data>

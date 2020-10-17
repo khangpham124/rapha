@@ -1,3 +1,4 @@
+
 function renderCheckout() {
     const checkoutList = $('#checkout-list');
     var htmlCart = '';
@@ -14,7 +15,8 @@ function renderCheckout() {
                 </tr>`
         total +=   subTotal;     
     });
-    htmlCart += `<tr><td colspan="3">Total</td><td colspan="2"><span id="totalPrice">`+ total +`</span> $</td></tr>`;
+    htmlCart += `<tr><td colspan="3">Total<br><span class="text-note">Subtotal does not include shipping & tax</span></td><td colspan="2"><span id="totalPrice">`+ total +`</span> $
+    </td></tr>`;
     checkoutList.html(htmlCart);
 }
 renderCheckout();
@@ -39,3 +41,4 @@ $('#checkout-list').on('click', '.js-remove-item', function() {
         $('.js-get-booking').hide();
     }
 });
+

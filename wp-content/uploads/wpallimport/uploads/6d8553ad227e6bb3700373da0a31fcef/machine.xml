@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<sealingmachine><![CDATA[SUGAR MACHINE]]></sealingmachine>
+		<el_60000><![CDATA[500.00  «]]></el_60000>
+		<el_1machine><![CDATA[1 Machine]]></el_1machine>
+	</node>
+	<node>
+		<sealingmachine><![CDATA[WATER BOILER]]></sealingmachine>
+		<el_60000><![CDATA[1,040.00  «]]></el_60000>
+		<el_1machine><![CDATA[1 Machine]]></el_1machine>
+	</node>
+</data>

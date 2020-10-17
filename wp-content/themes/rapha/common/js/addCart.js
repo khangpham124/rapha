@@ -15,10 +15,11 @@ function renderCart() {
     var htmlCart = '';
     var numb = 0;
     var getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
+    var i = 0;
     $.each(getCurrentCart,function (index){
         htmlCart += `<li class="flex-box flex-box--between flex-box--aligncenter">
                 <p class="list-cart-name">`+ getCurrentCart[index]['name_pro'] + `
-                <p class="list-cart-quantity">` + getCurrentCart[index]['quantity'] + `</p>
+                <p class="list-cart-quantity"><input type="number" data-change="${index}" value="` + getCurrentCart[index]['quantity'] + `" class="input-page js-quan-cart"></p>
                 <a href="javascript:void(0)" class="js-remove-item" data-rmv="`+ getCurrentCart[index]['id_pro'] +`"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 </li>`
         numb += Number(getCurrentCart[index]['quantity']);
@@ -77,7 +78,7 @@ $('#list-products').on('click', '.addToCard', function() {
 
     isThis.html('<i class="fa fa-spinner fa-spin"></i> Loading...');
     setTimeout(function() {
-        isThis.html('<i class="fa fa-shopping-cart"></i> Đã thêm');
+        isThis.html('<i class="fa fa-shopping-cart"></i> Added');
         isThis.addClass('disable');
     }, 500);
     var eachItem = [];
@@ -135,6 +136,19 @@ $('#cart-in').on('click', '.js-remove-item', function() {
     }
 });
 
+$('.js-quan-cart').focusout(function(){
+    let isThis= $(this);
+    let updateQuan = parseInt(isThis.val());
+    let itemChange = isThis.attr('data-change');
+    let getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
+    // $.each(getCurrentCart,function (index){
+        
+    // });
+    getCurrentCart[itemChange]['quantity'] = updateQuan;
+    localStorage.setItem('minicart', JSON.stringify(getCurrentCart));
+    renderCart();
+});
+
 
 $('.js-get-booking').click(function() {
     var bodyFormData = new FormData();
@@ -162,6 +176,7 @@ $('.js-get-booking').click(function() {
     bodyFormData.append("email", email );
     
     var booking = JSON.parse(localStorage.getItem('minicart'));
+    
     for (var i = 0; i < booking.length; i++) {
         bodyFormData.append("prod_name_"+ i , booking[i]['name_pro'] );
         bodyFormData.append("prod_quan_"+ i , booking[i]['quantity'] );
@@ -180,3 +195,5 @@ $('.js-get-booking').click(function() {
         window.location.href = 'https://teddycoder.com/projects/rapha-tea/confirm';
     });
 });
+
+

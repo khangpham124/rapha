@@ -32,6 +32,10 @@ include(APP_PATH."libs/head.php");
         </ul>
     </section>
     <section id="about-us" class="about-section">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_1.png" class="leaf-anim leaf-anim-1 top-left">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_2.png" class="leaf-anim leaf-anim-2 top-bottom">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_3.png" class="leaf-anim leaf-anim-3 top-right">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_4.png" class="leaf-anim leaf-anim-4 left-right">
         <div class="about-section-wrap wow fadeInUp">
             <div class="container">
                 <h2 class="header-page"><?php echo ${'lang_'.$lang_web}['text']['about'] ?></h2>
@@ -80,7 +84,7 @@ include(APP_PATH."libs/head.php");
         <div class="menu-section__bottom"><img src="<?php echo APP_ASSETS; ?>img/top/img_leaf_bottom.png" ></div>
         <div class="menu-section-wrap">
             <h2 class="header-page taC">Menu</h2>
-            <div class="container">
+            <div class="container min-height-70">
                 <div class="menu-section-wrap-list">
                     <ul class="menu-section-list">
                         <?php
@@ -89,9 +93,8 @@ include(APP_PATH."libs/head.php");
                             'child_of' => 0,
                             'orderby' =>'ID',
                             'order' => 'ASC',
-                            'hide_empty' => 0,
+                            'hide_empty' => 1,
                             'taxonomy' => 'menuscat',
-                            'number' => '0',
                             'pad_counts' => false
                             );
                             $categories = get_categories($args);
@@ -118,8 +121,9 @@ include(APP_PATH."libs/head.php");
                     $categories = get_categories($args);
                     foreach ( $categories as $category ):
                     $slug = $category->slug;
+                    $i++;
                 ?>
-                    <div class="menu-section-tab" id="<?php echo $slug; ?>">
+                    <div class="menu-section-tab menu_<?php echo $i; ?>" id="<?php echo $slug; ?>">
                     <ul id="cat_<?php echo $slug; ?>" <?php if($slug != 'flavored-tea') { ?>class="flex-box flex-box--wrap"<?php } ?>>
                         <?php
                             $wp_query = new WP_Query();
@@ -141,7 +145,7 @@ include(APP_PATH."libs/head.php");
                             $thumb_url = wp_get_attachment_image_src($thumbnail,'full');
                             $i++;
                         ?>
-                        <li class="<?php if($slug != 'flavored-tea') { ?>grid--25 mt--25<?php } ?>">
+                        <li class="<?php if($slug != 'flavored-tea') { ?>grid__mb--48 grid--25 mt--25<?php } ?>">
                             <?php if($thumb_url) { ?>
                             <p class="mt__mb--0 <?php if($i%3==1) { ?>mt--0 <?php } ?><?php if(($i==2)||($i%2==1)&&($i>1)) {?>mt--60<?php } ?> <?php if(($i%3 == 0)&&($i > 1)) {?>mt--120<?php } ?>"><img src="<?php echo $thumb_url[0]; ?>" alt="" ></p>
                             <?php } ?>
@@ -152,6 +156,7 @@ include(APP_PATH."libs/head.php");
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php var_dump(get_field('menu_file')) ?>
             <p class="taC mt--50"><a href="" class="btn-page"><?php echo ${'lang_'.$lang_web}['text']['discover'] ?></a></p>
         </div>    
     </section>

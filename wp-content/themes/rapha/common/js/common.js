@@ -51,6 +51,57 @@ $('#getData').click(function() {
     $(this).addClass('disable');
 });
 
+
+$('.js-edit-booking').click(function() {
+    $('.popup').fadeIn(20);
+    $('.overlay').fadeIn(20);
+    $('#formUpdate').html('<p class="taC fz--24 mt--30"><i class="fa fa-spinner fa-spin"></i></p>');
+    var isThis = $(this);
+    var idBooking = isThis.attr('data-edit'); 
+    var urlEditlBooking = $('#order-list').attr('data-action-edit'); 
+    var bodyFormData = new FormData();
+    bodyFormData.append("idBooking", idBooking );
+    const options = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        data: bodyFormData,
+        url: urlEditlBooking
+    };
+    axios(options).then(function (response) {
+        $('#formUpdate').html(response.data);
+    });
+});
+
+// $('#formUpdate').on('change', '.js-input-update', function() {
+//     console.log('abc');
+// });
+
+// $( ".js-input-update" ).keyup(function() {
+//     console.log('bbb');
+// });
+
+$('.js-cancel-booking').click(function() {
+    var isThis = $(this);
+    isThis.html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+    var urlCancelBooking = $('#order-list').attr('data-action-del'); 
+    var idBooking = isThis.attr('data-cancel'); 
+    var last_update = $('#last_update').val(); 
+    var bodyFormData = new FormData();
+    bodyFormData.append("idBooking", idBooking );
+    bodyFormData.append("last_update", last_update );
+    const options = {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        data: bodyFormData,
+        url: urlCancelBooking
+    };
+    axios(options).then(function (response) {
+        setTimeout(function(){
+                location.reload();
+        }, 500);
+    });
+});
+
 $('.js-rmv-address').click(function() {
     var isThis = $(this);
     var urlBooking = $('#list-address').attr('data-action'); 
@@ -73,6 +124,10 @@ $('.js-rmv-address').click(function() {
     });
 });
 
+$('.js-toogle-click').click(function() {
+    $(this).prev('.toggleSection').slideToggle(200);
+});
+
 $('.js-add-address').click(function() {
     var isThis = $(this);
     var urlBooking = $(this).attr('data-action');    
@@ -91,6 +146,7 @@ $('.js-add-address').click(function() {
     axios(options).then(function (response) {
         isThis.html('<i class="fa fa-shopping-cart"></i> Đã thêm');
         $('#address').val('');
+        // $('#addressDeliver').
         setTimeout(function(){
                 location.reload();
         }, 500);

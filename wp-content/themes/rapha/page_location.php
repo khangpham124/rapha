@@ -20,9 +20,9 @@ include(APP_PATH."libs/head.php");
         <div class="about-section-wrap wow fadeInUp">
             <div class="container">
                 <h2 class="header-page"><?php echo ${'lang_'.$lang_web}['text']['location'] ?></h2>
-                <div class="flex-box flex-box--between mt--50 wrap-map">
-                    <div id="controls" class="grid--30"></div>
-                    <div id="gmap-menu" class="grid--70"></div>
+                <div class="flex-box flex-box--between mt--50 wrap-map flex-box--wrap--mb">
+                    <div id="controls" class="grid--30 grid__mb--100"></div>
+                    <div id="gmap-menu" class="grid--70 grid__mb--100"></div>
                 </div>
             </div>
         </div>
@@ -65,6 +65,7 @@ include(APP_PATH."libs/head.php");
             locations: LocsA,
             map_div: '#gmap-menu',
             controls_type: 'list',
+            zoom: 10,
             controls_on_map: false
         }).Load(); 
         var lang = readCookie('lang_web');

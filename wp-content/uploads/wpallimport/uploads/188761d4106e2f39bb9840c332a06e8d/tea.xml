@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<node>
+		<column_1><![CDATA[CEYLON BLACK TEA LEAF  * 901]]></column_1>
+		<column_2><![CDATA[225.00]]></column_2>
+		<column_3><![CDATA[50 bags per box]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[OOLONG TEA LEAF ]]></column_1>
+		<column_2><![CDATA[310.00]]></column_2>
+		<column_3><![CDATA[50 bags per box]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[JASMINE GREEN TEA LEAF *  667 ]]></column_1>
+		<column_2><![CDATA[325.00]]></column_2>
+		<column_3><![CDATA[50 bags per box]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[BARLEY ]]></column_1>
+		<column_2><![CDATA[]]></column_2>
+		<column_3><![CDATA[50 bags per box]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[OOLONG GREEN TEA LEAF ]]></column_1>
+		<column_2><![CDATA[365.00]]></column_2>
+		<column_3><![CDATA[50 bags per box]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[THAI TEA LEAF]]></column_1>
+		<column_2><![CDATA[]]></column_2>
+		<column_3><![CDATA[]]></column_3>
+	</node>
+	<node>
+		<column_1><![CDATA[BUTTERFLY LEAF]]></column_1>
+		<column_2><![CDATA[]]></column_2>
+		<column_3><![CDATA[Per bag]]></column_3>
+	</node>
+</data>

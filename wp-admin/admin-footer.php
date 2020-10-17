@@ -115,5 +115,9 @@ if ( function_exists( 'get_site_option' ) ) {
 
 <div class="clear"></div></div><!-- wpwrap -->
 <script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+<script>
+	let postName = document.querySelector('[name="post_title"]').value;
+	console.log(postName)
+</script>
 </body>
 </html>
