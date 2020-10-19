@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 		$address = $_POST['address'];
 		$idUser = $_POST['idUser'];
@@ -10,7 +10,7 @@ include(LOAD_PATH."/wp-load.php");
 
 		$fullname = $_POST['fullname'];
 		$phone = $_POST['phone'];
-		$email = $_POST['email'];
+		$emailAgency = $_POST['email'];
 
 
 		$IDBooking = 'RAP'. $idUser . date("Y") .date("m") . date("d") .rand(100,999);
@@ -31,7 +31,7 @@ include(LOAD_PATH."/wp-load.php");
 
 		update_post_meta($pid, 'fullname', $fullname);
 		update_post_meta($pid, 'phone', $phone);
-		update_post_meta($pid, 'email', $email);
+		update_post_meta($pid, 'email', $emailAgency);
 		
 		$listBooking = array();
 		$numberOder = $_POST['numberOder'];
@@ -45,94 +45,109 @@ include(LOAD_PATH."/wp-load.php");
 
 //SEND MAIL 
 
-$aMailto = array("khang.pham@navigosgroup.com","khangpham421@gmail.com","khang.pham@raphatea.org");
-$from = "raphateamailer@gmail.com";
 
 // 設定
-require(LOAD_PATH."/mailer/jphpmailer.php");
+include(LOAD_PATH."/mail/class.phpmailer.php");
+include(LOAD_PATH."/mail/class.smtp.php"); 
 
-$msgBody = "
-■Fullname
-$fullname
+$mail = new PHPMailer();
+$mail->IsSMTP(); // set mailer to use SMTP
+$mail->Host = "smtp.googlemail.com"; // specify main and backup server
+$mail->Port = 465; // set the port to use
+$mail->SMTPAuth = true; // turn on SMTP authentication
+$mail->SMTPSecure = 'ssl';
+$mail->Username = "raphateamailer@gmail.com"; // your SMTP username or your gmail username
+$mail->Password = "B#*0906350881b"; // your SMTP password or your gmail password
+$from = "raphateamailer@gmail.com"; // Reply to this email
 
-■Phone
-$phone
 
-■Address to deliver
-$address
+$to="hnguyen@raphatea.org";
+$to2="khang.pham@raphatea.org";
+$to3="thanhly@raphatea.org";
 
-■Order Date
-$orderDate
-";
 
+$name="RaphaTea Booking System System "; // Recipient's name
+
+$mail->From = $from;
+$mail->FromName = "RaphaTea Booking System"; // Name to indicate where the email came from when the recepient received
+$mail->AddAddress($to,$name);
+$mail->AddAddress($to2,$name);
+$mail->AddAddress($to3,$name);
+$mail->AddAddress($emailAgency,$name);
+
+
+$mail->WordWrap = 50; // set word wrap
+$mail->IsHTML(true); // send as HTML
+$mail->Subject = "EMAIL RECEIVED BY CLIENT";
+$mail->CharSet = 'UTF-8';
+
+
+$orderDetail = "";
 
 for($n=0; $n<$numberOder; $n++) {
 	$namepro = $listBooking[$n]['name_pro'];
 	$quanpro = $listBooking[$n]['quantity'];
 	$pricepro = $listBooking[$n]['price'];
-	$msgBody .="
-		$namepro - $quanpro - $pricepro
+	$rate = $quanpro * $pricepro;
+	$orderDetail .= "
+		<tr>
+			<td>$namepro x $quanpro</td>
+			<td>$ $rate</td>
+		</tr>
 	";
 }
+	$orderDetail .= "
+		<tr>
+			<td colspan='2'>Total: $totalPrice<br>
+			<span style='font-style:italic;color:#07407e;'>Subtotal does not include shipping & tax</span>
+			</td>
+		</tr>
+	";
 
-$msgBody .="
-Total:
-$totalPrice
-";
+$mail->Body = "
+<style type='text/css'> .bold{font-size:16px;font-weight:bold;} </style>
+From: $fullname<br>
+Order Date: $orderDate<br>
+Phone:$phone<br>
+<br>
+<br>
+<br>
+Address to deliver: $address <br>
+Your Order #$IDBooking is comfirmed
 
-
-echo $msgBody;
-
-//お問い合わせメッセージ送信
-	$subject = "Mail booking from Rapha Tea";
-	$body = "
-    
-    Hi,
-    $msgBody
-    ";
-
-//お客様用メッセージ
-	$subject1 = "Mail booking from Rapha Tea";
-	$body1 = "
-
-    Dear $reg_name
-
-    Mail confirm your booking
-    ---------------------------------------------------------------
-    ---------------------------------------------------------------
-
-    $msgBody
-
-    ---------------------------------------------------------------
-    Rapha Tea
-    ---------------------------------------------------------------
-";
-
-	// メール送信
-	mb_language("ja");
-	mb_internal_encoding("UTF-8");
+<table style='width:600px;border-collapse: collapse;'>
+	<tr style='border-bottom:1px solid #ccc;'>
+	<td><img src='http://raphatea.org/data/logo.png'></td>
+	<td>ORDER #$IDBooking</td>
+	</tr>
+</table>	
 	
-	$fromname = "Rapha Tea booking System";
+<p style='font-size:16px;font-weight:bold;'>Thank you for your purchase!</p>
 
-	$email1 = new JPHPmailer();
-	$email1->addTo($email);
-	$email1->setFrom($from,$fromname);
-	$email1->setSubject($subject1);
-	$email1->setBody($body1);
+<strong class='bold'>Dear Sir/Madam $fullname,</strong><br>
+We appreciateciate your order, and are currently processing it.
 
-	if($email1->send()) {};
-	
-	//メール送信
-	$email = new JPHPmailer();
-	for($i = 0; $i < count($aMailto); $i++)
-	{
-		$email->addTo($aMailto[$i]);
-	}
-	$email->setFrom($email, 'Rapha Tea booking System');
-	$email->setSubject($subject);
-	$email->setBody($body);
+<table style='width:600px;border-collapse: collapse;'>
+	<tr>
+		<td colspan='2'>ORDER SUMMARY</td>
+		$orderDetail
+	</tr>
+</table>
 
-	if($email->Send()) {};
-			
+---------------------------------------------------------------<br>
+RaphaTea<br>
+---------------------------------------------------------------
+
+"; //HTML Body
+$mail->AltBody = "Mail nay duoc goi bang phpmailer class."; //Text Body
+//$mail->SMTPDebug = 2;
+if(!$mail->Send())
+{
+	echo "<h1>Loi khi goi mail: " . $mail->ErrorInfo . '</h1>';
+}
+else
+{
+	echo "<h1>Send mail thanh cong</h1>";
+}
 
 ?>

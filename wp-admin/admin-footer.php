@@ -117,7 +117,8 @@ if ( function_exists( 'get_site_option' ) ) {
 <script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
 <script>
 	let postName = document.querySelector('[name="post_title"]').value;
-	console.log(postName)
+	let invoiceBtn = document.getElementById('create_invoice'); 
+	invoiceBtn.setAttribute("href", 'http://raphatea.org/data/export.php?code=' + postName);
 </script>
 </body>
 </html>

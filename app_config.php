@@ -1,9 +1,9 @@
 <?php
-	define("APP_URL", "https://teddycoder.com/projects/rapha-tea/");
-	define("APP_ASSETS", "https://teddycoder.com/projects/rapha-tea/wp-content/themes/rapha/common/");
-	define("APP_URL_USER", "https://teddycoder.com/projects/rapha-tea/dashboard");
-	define("APP_PATH", "/home/teddycoder/public_html/projects/rapha-tea/wp-content/themes/rapha/");
-	define("LOAD_PATH", "/home/teddycoder/public_html/projects/rapha-tea/");
-	define("DATA_PATH", "/home/teddycoder/public_html/projects/rapha-tea/data/");
+	define("APP_URL", "http://raphatea.org/");
+	define("APP_ASSETS", "http://raphatea.org/wp-content/themes/rapha/common/");
+	define("APP_URL_USER", "http://raphatea.org/dashboard");
+	define("APP_PATH", "/home/raphatea/public_html/wp-content/themes/rapha/");
+	define("LOAD_PATH", "/home/raphatea/public_html/");
+	define("DATA_PATH", "/home/raphatea/public_html/data/");
+	define("COMPANY_ID", 607);
 ?>
-

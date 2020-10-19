@@ -1,4 +1,10 @@
 <?php
+
+// BEGIN iThemes Security - Do not modify or remove this line
+// iThemes Security Config Details: 2
+define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
+// END iThemes Security - Do not modify or remove this line
+
 /**
  * Cấu hình cơ bản cho WordPress
  *
@@ -21,13 +27,13 @@ define( 'WP_DEBUG', true );
 
 // ** Thiết lập MySQL - Bạn có thể lấy các thông tin này từ host/server ** //
 /** Tên database MySQL */
-define('DB_NAME', 'teddycoder_rapha');
+define('DB_NAME', 'raphatea_db');
 
 /** Username của database */
-define('DB_USER', 'teddycoder_admin');
+define('DB_USER', 'raphatea_admin');
 
 /** Mật khẩu của database */
-define('DB_PASSWORD', 'Aa120489');
+define('DB_PASSWORD', 'B#*0906350881b');
 
 /** Hostname của database */
 define('DB_HOST', 'localhost');

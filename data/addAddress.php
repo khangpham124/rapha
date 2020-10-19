@@ -1,5 +1,5 @@
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 		$address = $_POST['address'];
 		$pid = $_POST['idUser'];
