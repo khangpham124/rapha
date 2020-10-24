@@ -1,6 +1,6 @@
 <?php /* Template Name: Orders */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 
@@ -98,6 +98,7 @@ include(APP_PATH."libs-user/head.php");
         <form method="post" id="formUpdate">
             <input type="hidden" value="<?php echo date("d-m-Y H:i:s"); ?>" name="last_update">
         </form>
+        <em>You can only edit your order before we have confirm it</em>
     </div>
     <div class="overlay"></div>
 </body>

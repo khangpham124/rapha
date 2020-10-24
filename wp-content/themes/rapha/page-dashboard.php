@@ -1,6 +1,6 @@
 <?php /* Template Name: Dashboard */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -89,7 +89,10 @@ include(APP_PATH."libs-user/head.php");
                     <div class="cart-fixed-inner js-cart-fixed-inner">
                         <h2 class="h2_page numbCart bg--grey">Your Cart (<span class="js-numbCart">0</span>)</h2>
                         <ul id='cart-in' class="list-cart"></ul>
-                        <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
+                        <div class="flex-box flex-box--center">
+                            <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
+                            <p class="taC btn-viewmore ml--10"><a href="<?php echo APP_URL; ?>cart" class="btn-page">View all</a></p>
+                        </div>
                     </div>
                 </div>
             </div>

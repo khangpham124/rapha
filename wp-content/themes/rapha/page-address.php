@@ -1,6 +1,6 @@
 <?php /* Template Name: Address */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 </head>
@@ -21,7 +21,7 @@ include(APP_PATH."libs-user/head.php");
                             <table class="table-page mt--30">
                                 <tr>
                                     <td> New address</td>
-                                    <td><input type='text' class="input-page" name="address" id="address" placeholder="Nhập địa chỉ mới"></td>
+                                    <td><input type='text' class="input-page" name="address" id="address" placeholder="Enter new address"></td>
                                 </tr>
                             </table>
                             <input type="hidden" name="iduser" id="iduser" value="<?php echo $userID; ?>" >

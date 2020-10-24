@@ -1,11 +1,11 @@
 <?php /* Template Name: Checkout */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(APP_PATH."libs-user/head.php");
 ?>
 <script>
     if(!localStorage.getItem('minicart')) {
-    window.location.href = 'https://teddycoder.com/projects/rapha-tea/dashboard';
+    window.location.href = 'http://raphatea.org/dashboard';
     }
 </script>
 </head>

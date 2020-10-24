@@ -1,4 +1,3 @@
-
 function renderCheckout() {
     const checkoutList = $('#checkout-list');
     var htmlCart = '';

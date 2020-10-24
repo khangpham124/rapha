@@ -35,6 +35,19 @@
     }
 }
 .dashboard {
+    .popup {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    #cart-head .item_hide  {
+        display: none;
+    }
+    #cart-in .item_hide  {
+        display: none;
+    }
+    .btn-page i {
+        margin: 0;
+    }
     .numb-cart {
         background: $color-green;
         color: $color-blue-dark;

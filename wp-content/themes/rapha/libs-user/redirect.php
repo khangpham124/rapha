@@ -22,7 +22,7 @@
 <?php endif; ?>
 <!--responsive or smartphone-->
 
-<title><?php echo $titlepage = 'test'; ?></title>
+<title><?php echo $titlepage = 'Login to Dashboard Rapha Tea'; ?></title>
 
 <!--css-->
 <link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/style.css" media="all">
@@ -32,7 +32,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--favicons-->
-<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="<?php echo APP_ASSETS; ?>img/icon/favicon.ico" type="image/vnd.microsoft.icon">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">

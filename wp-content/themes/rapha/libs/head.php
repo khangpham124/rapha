@@ -54,7 +54,6 @@ if(!isset($_COOKIE['lang_web'])) {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--favicons-->
 <link rel="icon" href="<?php echo APP_ASSETS; ?>img/icon/favicon.ico" type="image/vnd.microsoft.icon">
-<link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">

@@ -12,12 +12,15 @@ function listCookies() {
 function renderCart() {
     const carInner = $('#cart-in');
     const cartHead = $('#cart-head');
+    const cartPage = $(('#list-prod'))
     var htmlCart = '';
     var numb = 0;
     var getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
     var i = 0;
     $.each(getCurrentCart,function (index){
-        htmlCart += `<li class="flex-box flex-box--between flex-box--aligncenter">
+        let hideItem;
+        if( parseInt(index) > 7) { hideItem= 'item_hide';} else { hideItem = '';}
+        htmlCart += `<li class="flex-box flex-box--between flex-box--aligncenter `+ hideItem +`">
                 <p class="list-cart-name">`+ getCurrentCart[index]['name_pro'] + `
                 <p class="list-cart-quantity"><input type="number" data-change="${index}" value="` + getCurrentCart[index]['quantity'] + `" class="input-page js-quan-cart"></p>
                 <a href="javascript:void(0)" class="js-remove-item" data-rmv="`+ getCurrentCart[index]['id_pro'] +`"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
@@ -27,6 +30,7 @@ function renderCart() {
     $('.js-numbCart').html(numb);
     carInner.html(htmlCart);
     cartHead.html(htmlCart);
+    cartPage.html(htmlCart);
 }
 
 
@@ -63,8 +67,14 @@ if(sizeCart > 0) {
     renderCart();
     $('.btn-checkout').show();
 } else {
-    $('#cart-in').html('<p class="mt--40">Chưa có sản phẩm</p>');
-    $('#cart-head').html('Chưa có sản phẩm');
+    $('#cart-in').html('<p class="mt--40">Your cart is empty</p>');
+    $('#cart-head').html('Your cart is empty');
+}
+
+if(sizeCart > 7) {
+    $('.btn-viewmore').show();
+} else {
+    $('.btn-viewmore').hide();
 }
 
 
@@ -112,11 +122,17 @@ $('#list-products').on('click', '.addToCard', function() {
     }
     renderCart();
     $('.btn-checkout').show();
+    var sizeCart = Object.size(JSON.parse(localStorage.getItem('minicart')));
+    if(sizeCart > 7) {
+        $('.btn-viewmore').show();
+    } else {
+        $('.btn-viewmore').hide();
+    }
 });
 
 
 /* remove Item from cart */
-$('#cart-in').on('click', '.js-remove-item', function() {
+$('body').on('click', '.js-remove-item', function() {
     var elm = $(this);
     var getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
     var newCart = []
@@ -133,6 +149,11 @@ $('#cart-in').on('click', '.js-remove-item', function() {
     if(sizeCart == 0) {
         $('.btn-checkout').hide();
         $('#cart-in').html('<p class="mt--40">Chưa có sản phẩm nào</p>');
+    }
+    if(sizeCart > 7) {
+        $('.btn-viewmore').show();
+    } else {
+        $('.btn-viewmore').hide();
     }
 });
 
@@ -192,7 +213,7 @@ $('.js-get-booking').click(function() {
     };
     axios(options).then(function (response) {
         localStorage.removeItem('minicart');
-        window.location.href = 'https://teddycoder.com/projects/rapha-tea/confirm';
+        window.location.href = 'http://raphatea.org/confirm';
     });
 });
 

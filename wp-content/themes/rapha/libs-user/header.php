@@ -27,7 +27,10 @@
                 <ul id='cart-head' class="list-cart">
                 There are no items in your cart
                 </ul>
+                <div class="flex-box flex-box--center">
                 <p class="taC btn-checkout"><a href="<?php echo APP_URL; ?>checkout" class="btn-page">Checkout</a></p>
+                <p class="taC btn-viewmore"><a href="<?php echo APP_URL; ?>cart" class="btn-page ml--10">View all</a></p>
+                </div>
             </div>
     </div>
 </header>

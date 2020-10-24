@@ -11,7 +11,7 @@ if (!timer_is_on) {
     timedCount();
 }
 /* END LOADER */
-const APP_ASSETS = 'https://teddycoder.com/projects/rapha-tea/wp-content/themes/rapha/common/';
+const APP_ASSETS = 'http://raphatea.org/wp-content/themes/rapha/common/';
 $(window).load(function(){
 	setTimeout(function() {
 		$('.loading-inner').addClass('anim');
@@ -28,7 +28,8 @@ $(window).load(function(){
       // dotsClass : 'slides-btn-dot-container',
       slidesToShow: 1,
       autoplay: true,
-      autoplaySpeed: 3000,
+      fade: true,
+      autoplaySpeed: 4500,
       speed: 800,
       dots: true,
       infinite: true,

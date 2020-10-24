@@ -527,3 +527,61 @@ function generateRandomString($length = 20) {
   }
   return $randomString;
 }
+
+
+function remove_menus () {
+    $user_depart =  'user_'.get_current_user_id();
+    $department = get_field('department', $user_depart);
+    global $menu;
+    // var_dump($menu);
+    if( $department == 'Media' ):
+      unset($menu[6]);
+      unset($menu[7]);
+      unset($menu[9]);
+      unset($menu[11]);
+      unset($menu[12]);
+      unset($menu[25]);
+      unset($menu[75]);
+    endif;
+
+    if( $department == 'Purchase' ):
+      unset($menu[2]);
+      unset($menu[5]);
+      unset($menu[6]);
+      unset($menu[9]);
+      unset($menu[8]);
+      unset($menu[10]);
+      unset($menu[11]);
+      unset($menu[12]);
+      unset($menu[13]);
+      unset($menu[20]);
+      unset($menu[25]);
+      unset($menu[75]);
+    endif;
+
+    if( $department == 'Sales' ):
+      unset($menu[2]);
+      unset($menu[5]);
+      unset($menu[7]);
+      unset($menu[9]);
+      unset($menu[8]);
+      unset($menu[10]);
+      unset($menu[11]);
+      unset($menu[12]);
+      unset($menu[13]);
+      unset($menu[20]);
+      unset($menu[25]);
+      unset($menu[75]);
+    endif;
+}
+add_action('admin_menu', 'remove_menus');
+
+function mytheme_admin_bar_render() {
+  global $wp_admin_bar;
+  $user_depart =  'user_'.get_current_user_id();
+    $department = get_field('department', $user_depart);
+    if(( $department == 'Purchase' )||( $department == 'Sales' )||( $department == 'Media' )):
+    $wp_admin_bar->remove_menu('new-content');
+  endif;
+  }
+  add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );

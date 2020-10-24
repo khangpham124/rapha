@@ -1,4 +1,5 @@
 <?php
+echo $_SERVER["DOCUMENT_ROOT"];
 include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
 include(APP_PATH."libs/head.php");
 ?>

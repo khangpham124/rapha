@@ -1,6 +1,6 @@
 <?php /* Template Name: Login */ ?>
 <?php
-include($_SERVER["DOCUMENT_ROOT"] . "/projects/rapha-tea/app_config.php");
+include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(APP_PATH."libs-user/redirect.php");
 
 ?>

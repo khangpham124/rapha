@@ -25,7 +25,6 @@ $pw = md5($_POST['password']);
 			$username = $post->post_title;
 			$fullname = get_field('fullname');
 			$pass_real = get_field('password');
-			$terms = get_the_terms($post->ID, 'userscat');
 			foreach($terms as $term) { 
 				$role_user = $term->slug;
 			}
@@ -33,13 +32,13 @@ $pw = md5($_POST['password']);
 				setcookie('login_cookies', $username, time() + (86400 * 30), "/");
 				setcookie('role_cookies', $role_user, time() + (86400 * 30), "/");
 				setcookie('name_cookies', $fullname, time() + (86400 * 30), "/");
-				header('Location:'.APP_URL);
+				echo "<script>window.location.href='".APP_URL."';</script>";
 			}
 			else {
-				header('Location:'.APP_URL.'login');
+				echo "<script>window.location.href='".APP_URL."login';</script>";
 			}
 		endwhile;
 	} else {
-		header('Location:'.APP_URL.'login');
+		echo "<script>window.location.href='".APP_URL."login';</script>";
 	}
 ?>

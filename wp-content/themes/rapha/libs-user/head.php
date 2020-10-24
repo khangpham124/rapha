@@ -1,6 +1,7 @@
 <?php
-	if(!$_COOKIE['login_cookies']) {
-		header('Location:'.APP_URL.'login');
+	if((!$_COOKIE['login_cookies'])) {
+		echo "<script>window.location.href='".APP_URL."login';</script>";
+		exit;
 	}
 ?>
 <?php echo('<?xml version="1.0" encoding="UTF-8"?>'); ?>
@@ -21,7 +22,7 @@
 		// set width when you use the tablet
 		$width = '1024px';
 ?>
-<meta content="width=<?php echo $width = 2024; ?>" name="viewport">
+<meta content="width=<?php echo $width = 1024; ?>" name="viewport">
 <?php else: ?>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <?php endif; ?>
@@ -37,7 +38,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--favicons-->
-<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="<?php echo APP_ASSETS; ?>img/icon/favicon.ico" type="image/vnd.microsoft.icon">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">

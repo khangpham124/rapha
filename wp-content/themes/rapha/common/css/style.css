@@ -557,6 +557,9 @@ button {
 .mr--20 {
   margin-right: 20px; }
 
+.ml--10 {
+  margin-left: 10px; }
+
 .ml--20 {
   margin-left: 20px; }
 
@@ -720,9 +723,7 @@ table.table-form-page {
 
 @media (max-width: 767px) {
   .grid__mb--100 {
-    width: 100%; }
-  .grid__mb--48 {
-    width: 48%; } }
+    width: 100%; } }
 
 .grid--small {
   max-width: 800px;
@@ -888,9 +889,6 @@ button.slick-prev {
       opacity: 1; }
       .slick-dots li.slick-active button button {
         background: #92c83e; }
-
-.min-height-70 {
-  min-height: 70vh; }
 
 .header {
   padding: 20px 0; }
@@ -1150,10 +1148,6 @@ button.slick-prev {
 
 #main-visual .main-img {
   height: 100vh; }
-  @media (max-width: 767px) {
-    #main-visual .main-img {
-      width: auto;
-      max-width: inherit; } }
 
 @media (max-width: 767px) {
   #main-visual {
@@ -1277,7 +1271,7 @@ button.slick-prev {
   padding: 120px 0; }
   @media (max-width: 767px) {
     .menu-section {
-      padding: 50px 0px 230px; } }
+      padding: 50px 0px; } }
   .menu-section-wrap {
     width: 100%; }
   .menu-section__top {
@@ -1291,9 +1285,6 @@ button.slick-prev {
     position: absolute;
     bottom: -5%;
     right: -5%; }
-    @media (max-width: 767px) {
-      .menu-section__bottom img {
-        height: 200px; } }
   .menu-section-wrap-list {
     overflow-x: auto;
     max-width: 1080px; }
@@ -1345,10 +1336,8 @@ button.slick-prev {
         .menu-section-list a {
           font-size: 13px; } }
   .menu-section-tab {
-    margin-top: 30px;
+    margin-top: 30;
     display: none; }
-    .menu-section-tab.menu_1 {
-      display: block; }
     .menu-section-tab i {
       color: #92c83e;
       margin-right: 15px; }
@@ -1563,85 +1552,6 @@ button.slick-prev {
   background: red;
   display: none; }
 
-.leaf-anim {
-  position: absolute; }
-  .leaf-anim-1 {
-    top: 5%;
-    left: 25%;
-    height: 120px; }
-  .leaf-anim-2 {
-    bottom: 20%;
-    left: 60%;
-    height: 150px; }
-  .leaf-anim-3 {
-    top: 30%;
-    right: 15%;
-    height: 50px; }
-  .leaf-anim-4 {
-    bottom: 15%;
-    left: 15%;
-    height: 80px; }
-
-.leaf-anim.top-left {
-  animation: gem-move-top-left 15s infinite; }
-
-.leaf-anim.top-right {
-  animation: gem-move-top-right 10s infinite; }
-
-.leaf-anim.top-bottom {
-  animation: gem-move-top-bottom 20s infinite; }
-
-.leaf-anim.left-right {
-  animation: gem-move-left-right 15s infinite; }
-
-@keyframes gem-move-top-left {
-  from,
-  50%,
-  to {
-    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  from {
-    transform: translateY(0) translateX(40%) rotate(0deg); }
-  50% {
-    transform: translateY(-60%) translateX(-60%) rotate(180deg); }
-  to {
-    transform: translateY(0) translateX(10%) rotate(360deg); } }
-
-@keyframes gem-move-top-right {
-  from,
-  50%,
-  to {
-    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  from {
-    transform: translateY(0) rotate(0deg); }
-  50% {
-    transform: translateY(-200%) rotate(180deg); }
-  to {
-    transform: translateY(0) rotate(360deg); } }
-
-@keyframes gem-move-top-bottom {
-  from,
-  50%,
-  to {
-    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  from {
-    transform: translateY(0) rotate(0deg) translateX(70%); }
-  50% {
-    transform: translateY(-250%) rotate(-180deg) translateX(-10%); }
-  to {
-    transform: translateY(0) rotate(-360deg) translateX(20%); } }
-
-@keyframes gem-move-left-right {
-  from,
-  50%,
-  to {
-    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
-  from {
-    transform: translateY(0) translateX(40%); }
-  50% {
-    transform: translateY(-280%) translateX(-80%); }
-  to {
-    transform: translateY(0) translateX(10%); } }
-
 #top .hideSide ul li:nth-child(1) {
   background: #e1e1e1; }
 
@@ -1659,6 +1569,15 @@ button.slick-prev {
   /* Firefox */
   /* hide default down arrow in IE10*/
   /* hack to fall back in opera */ }
+  .dashboard .popup {
+    max-height: 70vh;
+    overflow-y: auto; }
+  .dashboard #cart-head .item_hide {
+    display: none; }
+  .dashboard #cart-in .item_hide {
+    display: none; }
+  .dashboard .btn-page i {
+    margin: 0; }
   .dashboard .numb-cart {
     background: #92c83e;
     color: #07407e;
