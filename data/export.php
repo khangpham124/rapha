@@ -23,7 +23,9 @@ if ( is_user_logged_in() ) {
             
             $this->Cell(0,35,"Email:sales@raphatea.org",0,0,R);
             // Line break
-            $this->Ln(20);   
+            $this->Ln(5);
+            $this->Ln();
+
         }
 
         function InfoInvoice($code)
@@ -85,40 +87,45 @@ if ( is_user_logged_in() ) {
                 $this->Cell(62,10,$col,1);
             $this->Ln();
             // Data
+            $this->Cell(148,10,'Product name',1);
+            $this->Cell(22,10,'Quantity',1);
+            $this->Cell(20,10,'Rate',1);
+            $this->Ln();
             while(has_sub_field('order_detail',$code)):
-                $this->Cell(62,10,get_sub_field('name_pro',$code),1);
-                $this->Cell(62,10,get_sub_field('quantity',$code),1);
-                $this->Cell(62,10,get_sub_field('price',$code) . "$",1);
+                $this->Cell(148,10,get_sub_field('name_pro',$code),1);
+                $this->Cell(22,10,get_sub_field('quantity',$code),1);
+                $this->Cell(20,10,"$" .get_sub_field('price',$code),1);
                 $this->Ln();
             endwhile;
             $this->SetFillColor(255,255,255);
             $this->Ln(10);
             $this->Cell(0,6,"Shipping and Tax Fee: $ " . get_field('shipping_fee',$code),0,1,'R',true);
             $this->Ln(0);
+            $this->SetFont('Arial','B',14);
             $this->Cell(0,6,"Sub Total: $ " .get_field('sub_total',$code) ,0,1,'R',true);
             $this->Ln(10);
             $this->SetFillColor(240,240,240);
-            $this->Cell(0,6,"Paymenth Instructions",0,1,'L',true);
+            $this->Cell(0,6,"Payment Instructions",0,1,'L',true);
             $this->Ln(0);
             $this->SetFontSize(12);
             $this->Cell(0,6,get_field('bank_brand',$company) ,0,1,'L',true);
             $this->Ln(0);
-            $this->Cell(0,6,'BANK NAME' .get_field('bank_name',$company) ,0,1,'L',true);
+            $this->Cell(0,6,'BANK NAME ' .get_field('bank_name',$company) ,0,1,'L',true);
             $this->Ln(0);
-            $this->Cell(0,6,'BENEFICIARY' .get_field('beneficiary',$company) ,0,1,'L',true);
+            $this->Cell(0,6,'BENEFICIARY ' .get_field('beneficiary',$company) ,0,1,'L',true);
             $this->Ln(0);
-            $this->Cell(0,6,'BANK ADD' .get_field('bank_add',$company) ,0,1,'L',true);
+            $this->Cell(0,6,'BANK ADD ' .get_field('bank_add',$company) ,0,1,'L',true);
             $this->Ln(0);
-            $this->Cell(0,6,'ROUTING NO' .get_field('routing_no',$company) ,0,1,'L',true);
+            $this->Cell(0,6,'ROUTING NO ' .get_field('routing_no',$company) ,0,1,'L',true);
             $this->Ln(0);
-            $this->Cell(0,6,'A/C No' .get_field('ac_no',$company) ,0,1,'L',true);
+            $this->Cell(0,6,'A/C No ' .get_field('ac_no',$company) ,0,1,'L',true);
             $this->Ln(0);
         }
     }
 
     $pdf = new PDF();
     // Column headings
-    $header = array('Product name', 'Quantity', 'Rate');
+    // $header = array('Product name', 'Quantity', 'Rate');
     // Data loading
     $pdf->SetFont('Arial','',14);
     $pdf->AddPage();

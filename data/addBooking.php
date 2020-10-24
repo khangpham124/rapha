@@ -1,6 +1,7 @@
 <?php
 include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(LOAD_PATH."/wp-load.php");
+$email_rep = get_field('mail_company',COMPANY_ID);
 		$address = $_POST['address'];
 		$idUser = $_POST['idUser'];
 		$orderDate = $_POST['orderDate'];
@@ -58,7 +59,7 @@ $mail->SMTPAuth = true; // turn on SMTP authentication
 $mail->SMTPSecure = 'ssl';
 $mail->Username = "raphateamailer@gmail.com"; // your SMTP username or your gmail username
 $mail->Password = "B#*0906350881b"; // your SMTP password or your gmail password
-$from = "raphateamailer@gmail.com"; // Reply to this email
+$from = $email_rep; // Reply to this email
 
 
 $to="hnguyen@raphatea.org";
@@ -78,7 +79,7 @@ $mail->AddAddress($emailAgency,$name);
 
 $mail->WordWrap = 50; // set word wrap
 $mail->IsHTML(true); // send as HTML
-$mail->Subject = "EMAIL RECEIVED BY CLIENT";
+$mail->Subject = "ORDER #".$IDBooking." HAS BEEN RECEIVED";
 $mail->CharSet = 'UTF-8';
 
 
@@ -91,14 +92,14 @@ for($n=0; $n<$numberOder; $n++) {
 	$rate = $quanpro * $pricepro;
 	$orderDetail .= "
 		<tr>
-			<td>$namepro x $quanpro</td>
-			<td>$ $rate</td>
+			<td style='border:1px solid #ccc;padding:5px'>$namepro x $quanpro</td>
+			<td style='border:1px solid #ccc;padding:5px'>$ $rate</td>
 		</tr>
 	";
 }
 	$orderDetail .= "
 		<tr>
-			<td colspan='2'>Total: $totalPrice<br>
+			<td colspan='2' style='border:1px solid #ccc;padding:5px'>Total: $totalPrice<br>
 			<span style='font-style:italic;color:#07407e;'>Subtotal does not include shipping & tax</span>
 			</td>
 		</tr>
@@ -106,15 +107,6 @@ for($n=0; $n<$numberOder; $n++) {
 
 $mail->Body = "
 <style type='text/css'> .bold{font-size:16px;font-weight:bold;} </style>
-From: $fullname<br>
-Order Date: $orderDate<br>
-Phone:$phone<br>
-<br>
-<br>
-<br>
-Address to deliver: $address <br>
-Your Order #$IDBooking is comfirmed
-
 <table style='width:600px;border-collapse: collapse;'>
 	<tr style='border-bottom:1px solid #ccc;'>
 	<td><img src='http://raphatea.org/data/logo.png'></td>
@@ -125,11 +117,14 @@ Your Order #$IDBooking is comfirmed
 <p style='font-size:16px;font-weight:bold;'>Thank you for your purchase!</p>
 
 <strong class='bold'>Dear Sir/Madam $fullname,</strong><br>
-We appreciateciate your order, and are currently processing it.
+We appreciate your order, and are currently processing it.<br>
+For CONFIRMATION - You will receive an email confirmation once we have processed your order.<br>
+Let us know if you have any question, reply to this email. We'll be happy to help!
+
 
 <table style='width:600px;border-collapse: collapse;'>
 	<tr>
-		<td colspan='2'>ORDER SUMMARY</td>
+		<td style='border:1px solid #ccc;padding:5px' colspan='2'>ORDER SUMMARY</td>
 		$orderDetail
 	</tr>
 </table>

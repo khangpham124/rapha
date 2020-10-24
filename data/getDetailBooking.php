@@ -2,7 +2,8 @@
 include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 
-$postID = $_POST['postID'];
+$postID = $_POST['idBooking'];
+
 $args = array(
 'p' => $postID, // p -> id of post
 'post_type' => 'booking',
@@ -41,6 +42,7 @@ if($wp_query->have_posts()): $wp_query->the_post();
     <input type="hidden" value="" id="totalNewOrder" name="totalNewOrder">
     <input type="hidden" value="<?php the_title(); ?>" id="orderID" name="orderID">
     <input type="hidden" value="<?php echo get_field('email'); ?>" id="emailAgency" name="emailAgency">
+    <input type="hidden" value="<?php echo get_field('fullname'); ?>" id="fullname" name="fullname">
 </table>
 <?php endif; ?>
 
@@ -67,7 +69,7 @@ if($wp_query->have_posts()): $wp_query->the_post();
     $('.js-update-booking').click(function() {
         var isThis = $(this);
         isThis.html('<i class="fa fa-spinner fa-spin"></i> Updating...');
-        
+        isThis.addClass('disable');
         var urlUpdateBooking = $('#tableUpdate').attr('data-action-update'); 
         var idBooking = isThis.attr('data-update'); 
         var last_update = $('#last_update').val(); 
@@ -75,6 +77,7 @@ if($wp_query->have_posts()): $wp_query->the_post();
         var totalNewOrder = $('#totalNewOrder').val(); 
         var orderID = $('#orderID').val();
         var emailAgency = $('#emailAgency').val();
+        var fullname = $('#fullname').val();
 
         var bodyFormData = new FormData();
         bodyFormData.append("idBooking", idBooking );
@@ -83,6 +86,7 @@ if($wp_query->have_posts()): $wp_query->the_post();
         bodyFormData.append("totalNewOrder", totalNewOrder );
         bodyFormData.append("orderID", orderID );
         bodyFormData.append("emailAgency", emailAgency );
+        bodyFormData.append("fullname", fullname );
 
         for(var i = 0;i<numberOder;i++) {
             let name_pro = $(`#prod_name_${i}`).val(); 

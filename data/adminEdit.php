@@ -3,7 +3,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/app_config.php");
 include(LOAD_PATH."/wp-load.php");
 include(LOAD_PATH."/mail/class.phpmailer.php");
 include(LOAD_PATH."/mail/class.smtp.php"); 
-
+$email_rep = get_field('mail_company',COMPANY_ID);
 $code = $_GET['code'];
 $mypost = get_page_by_title( $code ,OBJECT, 'booking');
 $postID = $mypost->ID;
@@ -39,7 +39,7 @@ $mail->SMTPAuth = true; // turn on SMTP authentication
 $mail->SMTPSecure = 'ssl';
 $mail->Username = "raphateamailer@gmail.com"; // your SMTP username or your gmail username
 $mail->Password = "B#*0906350881b"; // your SMTP password or your gmail password
-$from = "raphateamailer@gmail.com"; // Reply to this email
+$from = $email_rep; // Reply to this email
 
 $to="hnguyen@raphatea.org";
 $to2="khang.pham@raphatea.org";
