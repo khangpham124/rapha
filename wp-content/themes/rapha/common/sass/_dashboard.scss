@@ -1,3 +1,6 @@
+.for-reset {
+    display: none;
+}
 #top {
     .hideSide {
         ul {
@@ -130,10 +133,15 @@
         background: #52a2f8;
         width: 200px;
         height: 40px;
+        line-height: 40px;
         text-align: center;
         border-radius: 5px;
         display: inline-block;
         color: $color-blue-dark;
+        &.disable {
+            pointer-events: none;
+            opacity: .6;
+        }
     }
     .hideSide {
         width: 20%;

@@ -403,6 +403,7 @@ button {
 	height: 150px;
 	width: 100%;
 	padding: 10px;
+	color: $color-white;
 }
 
 table.table-form-page {
@@ -545,6 +546,9 @@ table.table-form-page {
 		@media (max-width: 767px) {
 			&--100 {
 				width: 100%;
+			}
+			&--48 {
+				width: 48%;
 			}
 		}
 	}

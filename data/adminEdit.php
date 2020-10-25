@@ -55,7 +55,8 @@ $mail->AddAddress($to,$name);
 $mail->AddAddress($to2,$name);
 $mail->AddAddress($to3,$name);
 $mail->AddAddress($emailAgency,$name);
-$mail->addAttachment($fileInvoice);
+
+$mail->addReplyTo($email_rep, 'Sales RaphaTea');
 
 $mail->WordWrap = 50; // set word wrap
 $mail->IsHTML(true); // send as HTML
@@ -79,13 +80,13 @@ while(has_sub_field('order_detail')):
 endwhile;
 $orderDetail .= "
     <tr>
-        <td colspan='2'>Total: $totalNewOrder</td>
+        <td style='border:1px solid #ccc;padding:5px' colspan='2'>Total: $totalNewOrder</td>
     </tr>
     <tr>
-        <td colspan='2'>Shipping and Tax Fee: $extraFee</td>
+        <td style='border:1px solid #ccc;padding:5px' colspan='2'>Shipping and Tax Fee: $extraFee</td>
     </tr>
     <tr>
-        <td colspan='2'>Sub Total: $subTotalNewOrder</td>
+        <td style='border:1px solid #ccc;padding:5px' colspan='2'>Sub Total: $subTotalNewOrder</td>
     </tr>
 ";
 
@@ -95,7 +96,7 @@ $mail->Body = "
 Order #$orderID is update at $last_update by RaphaTea Administrator
 
 <table style='width:600px;border-collapse: collapse;'>
-	<tr>
+	<tr style='border-bottom:1px solid #ccc;'>
 	<td><img src='http://raphatea.org/data/logo.png'></td>
 	<td>ORDER #$orderID</td>
 	</tr>
@@ -104,16 +105,16 @@ Order #$orderID is update at $last_update by RaphaTea Administrator
 <p style='font-size:16px;font-weight:bold;'>Thank you for your purchase!</p>
 
 Dear Sir/Madam $fullname,<br>
-We appreciateciate your order, and are currently processing it.<br>
+Your Order #$orderID has been confirmed.<br>
 
 <table style='width:600px;border-collapse: collapse;'>
 	<tr>
-		<td colspan='2'>ORDER SUMMARY</td>
+		<td colspan='2' style='border:1px solid #ccc;padding:5px'>ORDER SUMMARY</td>
 		$orderDetail
 	</tr>
 </table>
-
-Download Invoice here:<br>
+<br><br>
+Please click the link below to view your invoice <br>
 $fileInvoice
 <br>
 

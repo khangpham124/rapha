@@ -33,9 +33,9 @@ include(APP_PATH."libs/head.php");
     </section>
     <section id="about-us" class="about-section">
         <img src="<?php echo APP_ASSETS; ?>img/top/leaf_1.png" class="leaf-anim leaf-anim-1 top-left">
-        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_2.png" class="leaf-anim leaf-anim-2 top-bottom">
-        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_3.png" class="leaf-anim leaf-anim-3 top-right">
-        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_4.png" class="leaf-anim leaf-anim-4 left-right">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_2.png" class="leaf-anim leaf-anim-2 top-right">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_3.png" class="leaf-anim leaf-anim-3 left-right">
+        <img src="<?php echo APP_ASSETS; ?>img/top/leaf_4.png" class="leaf-anim leaf-anim-4 top-bottom">
         <div class="about-section-wrap wow fadeInUp">
             <div class="container">
                 <h2 class="header-page"><?php echo ${'lang_'.$lang_web}['text']['about'] ?></h2>
@@ -156,8 +156,12 @@ include(APP_PATH."libs/head.php");
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?php var_dump(get_field('menu_file')) ?>
-            <p class="taC mt--50"><a href="" class="btn-page"><?php echo ${'lang_'.$lang_web}['text']['discover'] ?></a></p>
+            <?php
+            wp_reset_query();
+            $menuFiles =  get_field('menu_book');
+            $fileMenus = $menuFiles['url'];
+            ?>
+            <p class="taC mt--50"><a href="<?php echo $fileMenus; ?>" target="_blank" class="btn-page"><?php echo ${'lang_'.$lang_web}['text']['discover'] ?></a></p>
         </div>    
     </section>
     <?php wp_reset_query(); ?>
@@ -187,19 +191,19 @@ include(APP_PATH."libs/head.php");
                     <div class="grid--40 grid__mb--100 wow fadeInLeft pc"><img src="<?php echo APP_ASSETS; ?>img/top/img_cup_footer.png" class="contact-img" ></div>
                     <div class="contact-section-form grid--55 wow fadeInRight grid__mb--100">
                         <h2 class="header-page"><?php echo ${'lang_'.$lang_web}['text']['contact'] ?></h2>
-                        <form>
+                        <form method="post">
                             <table class="table-form-page">
                                 <tr>
                                     <th><?php echo ${'lang_'.$lang_web}['text']['your-name'] ?></th>
-                                    <td><input class="input-page" value="" id="name" type="text"></td>
+                                    <td><input class="input-page" value="" id="fullname" type="text" require></td>
                                 </tr>
                                 <tr>
                                     <th><?php echo ${'lang_'.$lang_web}['text']['email'] ?></th>
-                                    <td><input class="input-page" value="" id="email" type="email"></td>
+                                    <td><input class="input-page" value="" id="emailAgency" type="email" require></td>
                                 </tr>
                                 <tr>
                                     <th><?php echo ${'lang_'.$lang_web}['text']['phone-number'] ?></th>
-                                    <td><input class="input-page" value="" id="phone" type="phone"></td>
+                                    <td><input class="input-page" value="" id="phone" type="phone" require></td>
                                 </tr>
                                 <tr>
                                     <th><?php echo ${'lang_'.$lang_web}['text']['address'] ?></th>
@@ -207,12 +211,14 @@ include(APP_PATH."libs/head.php");
                                 </tr>
                                 <tr>
                                     <th><?php echo ${'lang_'.$lang_web}['text']['message'] ?></th>
-                                    <td><textarea class="textarea-page" id="message"></textarea></td>
+                                    <td><textarea class="textarea-page" id="message" require></textarea></td>
                                 </tr>
                             </table>
-                            <div class="taR">
-                                <button class="btn-page"><?php echo ${'lang_'.$lang_web}['text']['send'] ?><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                            <div class="flex-box flex-box--end flex-box--aligncenter">
+                                <p class="notiSend mr--20"></p>
+                                <a href="javascript:void(0)" class="btn-page js-send-contact"><?php echo ${'lang_'.$lang_web}['text']['send'] ?><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                             </div>
+                            <input type="hidden" id="actionURL" value="<?php echo APP_URL; ?>data/contact.php">
                         </form>
                     </div>
                 </div>

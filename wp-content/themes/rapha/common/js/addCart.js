@@ -157,18 +157,16 @@ $('body').on('click', '.js-remove-item', function() {
     }
 });
 
-$('.js-quan-cart').focusout(function(){
+$('body').on('change','.js-quan-cart',function(){
     let isThis= $(this);
     let updateQuan = parseInt(isThis.val());
     let itemChange = isThis.attr('data-change');
     let getCurrentCart = JSON.parse(localStorage.getItem('minicart'));
-    // $.each(getCurrentCart,function (index){
-        
-    // });
     getCurrentCart[itemChange]['quantity'] = updateQuan;
     localStorage.setItem('minicart', JSON.stringify(getCurrentCart));
     renderCart();
 });
+
 
 
 $('.js-get-booking').click(function() {

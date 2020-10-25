@@ -49,5 +49,10 @@
 	$fullname = get_field('fullname',$userID);
 	$email = get_the_title($userID);
 	$phone = get_field('phone',$userID);
+	$banned = get_field('banned',$userID);
+	if($banned == 'yes') {
+		echo "<script>window.location.href='".APP_URL."login';</script>";
+		exit;
+	}
 ?>
 

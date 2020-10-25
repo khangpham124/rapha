@@ -8,6 +8,7 @@ if(!isset($_COOKIE['lang_web'])) {
 } else {
 	$lang_web = $_COOKIE['lang_web'];
 }
+$time = current_time( 'Y-m-d' );
 ?>
 <head>
 <meta charset="utf-8">
@@ -46,7 +47,7 @@ if(!isset($_COOKIE['lang_web'])) {
 <!--/facebook-->
 
 <!--css-->
-<link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/style.css" media="all">
+<link rel="stylesheet" href="<?php echo APP_ASSETS; ?>css/style.css?ver=<?php echo $time; ?>" media="all">
 
 <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/wtf-forms.css'>
 <!--/css-->

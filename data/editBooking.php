@@ -34,19 +34,21 @@ $mail->Password = "B#*0906350881b"; // your SMTP password or your gmail password
 $from = $email_rep; // Reply to this email
 
 
-// $to="hnguyen@raphatea.org";
+$to="hnguyen@raphatea.org";
 $to2="khang.pham@raphatea.org";
-// $to3="thanhly@raphatea.org";
+$to3="thanhly@raphatea.org";
 
 
 $name="RaphaTea Booking System System "; // Recipient's name
 
 $mail->From = $from;
 $mail->FromName = "RaphaTea Booking System"; // Name to indicate where the email came from when the recepient received
-// $mail->AddAddress($to,$name);
+$mail->AddAddress($to,$name);
 $mail->AddAddress($to2,$name);
-// $mail->AddAddress($to3,$name);
+$mail->AddAddress($to3,$name);
 $mail->AddAddress($emailAgency,$name);
+
+$mail->addReplyTo($email_rep, 'Sales RaphaTea');
 
 $mail->WordWrap = 50; // set word wrap
 $mail->IsHTML(true); // send as HTML
@@ -78,7 +80,7 @@ $mail->Body = "
 <style type='text/css'> .bold{font-size:16px;font-weight:bold;} </style>
 
 <table style='width:600px;border-collapse: collapse;'>
-	<tr>
+	<tr style='border-bottom:1px solid #ccc;'>
 	<td><img src='http://raphatea.org/data/logo.png'></td>
 	<td>ORDER #$orderID</td>
 	</tr>

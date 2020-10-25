@@ -143,3 +143,45 @@ jQuery(document).ready(function($){
 		location.reload(); 
 	});
 });
+
+
+$('.js-send-contact').click(function() {
+  var isThis = $(this);
+  isThis.html('<i class="fa fa-spinner fa-spin"></i> Loading...');
+  var actionURL = $('#actionURL').val(); 
+  var fullname = $('#fullname').val();
+  var emailAgency = $('#emailAgency').val(); 
+  var phone = $('#phone').val(); 
+  var address = $('#address').val(); 
+  var message = $('#message').val(); 
+
+  var bodyFormData = new FormData();
+  bodyFormData.append("fullname", fullname );
+  bodyFormData.append("emailAgency", emailAgency );
+  bodyFormData.append("phone", phone );
+  bodyFormData.append("address", address );
+  bodyFormData.append("message", message );
+  const options = {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      data: bodyFormData,
+      url: actionURL
+  };
+  axios(options).then(function (response) {
+    $('.input-page').val('');
+    $('.textarea-page').val('');
+    let lang = readCookie('lang_web');
+    $('.js-send-contact').hide();
+    if((lang != '') || (lang == 'en')) {
+      $('.notiSend').text('Message sent. Please refesh page to send another message')
+      // $('.js-send-contact').html('Send <i class="fa fa-paper-plane" aria-hidden="true"></i>');
+    } else {
+      $('.notiSend').text('Tin nhắn đã được gửi. Vui lòng làm mới trang để gửi tin nhắn tiếp theo')
+      // $('.js-send-contact').html('Gửi <i class="fa fa-paper-plane" aria-hidden="true"></i>');
+    }
+    
+      setTimeout(function(){
+        $('.notiSend').text('');
+      }, 2000);
+  });
+});

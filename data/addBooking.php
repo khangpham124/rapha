@@ -76,6 +76,7 @@ $mail->AddAddress($to2,$name);
 $mail->AddAddress($to3,$name);
 $mail->AddAddress($emailAgency,$name);
 
+$mail->addReplyTo($email_rep, 'Sales RaphaTea');
 
 $mail->WordWrap = 50; // set word wrap
 $mail->IsHTML(true); // send as HTML
@@ -117,10 +118,12 @@ $mail->Body = "
 <p style='font-size:16px;font-weight:bold;'>Thank you for your purchase!</p>
 
 <strong class='bold'>Dear Sir/Madam $fullname,</strong><br>
+<br>
 We appreciate your order, and are currently processing it.<br>
 For CONFIRMATION - You will receive an email confirmation once we have processed your order.<br>
 Let us know if you have any question, reply to this email. We'll be happy to help!
-
+<br>
+<br>
 
 <table style='width:600px;border-collapse: collapse;'>
 	<tr>

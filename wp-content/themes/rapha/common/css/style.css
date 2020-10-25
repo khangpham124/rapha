@@ -599,7 +599,8 @@ button {
   background: transparent;
   height: 150px;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  color: #fff; }
 
 table.table-form-page {
   width: 100%;
@@ -723,7 +724,9 @@ table.table-form-page {
 
 @media (max-width: 767px) {
   .grid__mb--100 {
-    width: 100%; } }
+    width: 100%; }
+  .grid__mb--48 {
+    width: 48%; } }
 
 .grid--small {
   max-width: 800px;
@@ -1271,7 +1274,7 @@ button.slick-prev {
   padding: 120px 0; }
   @media (max-width: 767px) {
     .menu-section {
-      padding: 50px 0px; } }
+      padding: 50px 0px 300px; } }
   .menu-section-wrap {
     width: 100%; }
   .menu-section__top {
@@ -1285,6 +1288,9 @@ button.slick-prev {
     position: absolute;
     bottom: -5%;
     right: -5%; }
+    @media (max-width: 767px) {
+      .menu-section__bottom img {
+        height: 280px; } }
   .menu-section-wrap-list {
     overflow-x: auto;
     max-width: 1080px; }
@@ -1552,6 +1558,99 @@ button.slick-prev {
   background: red;
   display: none; }
 
+.leaf-anim {
+  position: absolute;
+  pointer-events: none; }
+  .leaf-anim-1 {
+    left: 12%;
+    bottom: 5%; }
+  .leaf-anim-2 {
+    left: 25%;
+    top: 15%; }
+  .leaf-anim-3 {
+    right: 18%;
+    bottom: 12%; }
+  .leaf-anim-4 {
+    left: 56%;
+    top: 38%; }
+  .leaf-anim.top-left {
+    animation: top-left 15s infinite; }
+  .leaf-anim.top-bottom {
+    animation: top-bottom 20s infinite; }
+  .leaf-anim.top-right {
+    animation: top-right 10s infinite; }
+  .leaf-anim.left-right {
+    animation: left-right 20s infinite; }
+
+@keyframes top-left {
+  from,
+  50%,
+  to {
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
+  from {
+    transform: translateY(0) rotate(0deg); }
+  50% {
+    transform: translateY(-100%) rotate(180deg); }
+  to {
+    transform: translateY(0) rotate(360deg); } }
+
+@keyframes top-bottom {
+  from,
+  20%,
+  40%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
+  from {
+    transform: translateY(0) rotate(0deg) translateX(-20%); }
+  20% {
+    transform: translateY(-100%) rotate(180deg) translateX(0%); }
+  40% {
+    transform: translateY(-100%) rotate(270deg) translateX(40%); }
+  80% {
+    transform: translateY(-100%) rotate(90deg) translateX(0%); }
+  to {
+    transform: translateY(0) rotate(360deg) translateX(-40%); } }
+
+@keyframes top-right {
+  from,
+  30%,
+  60%,
+  to {
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
+  from {
+    transform: translateY(0) rotate(0deg) translateX(-40%); }
+  30% {
+    transform: translateY(-80%) rotate(180deg) translateX(20%); }
+  60% {
+    transform: translateY(-80%) rotate(180deg) translateX(0%); }
+  to {
+    transform: translateY(0) rotate(360deg) translateX(-40%); } }
+
+@keyframes left-right {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0, 0, 1, 1); }
+  from {
+    transform: translateY(0) rotate(0deg) translateX(0%); }
+  20% {
+    transform: translateY(-80%) rotate(-180deg) translateX(-40%); }
+  40% {
+    transform: translateY(-80%) rotate(0deg) translateX(0%); }
+  60% {
+    transform: translateY(-80%) rotate(-90deg) translateX(40%); }
+  80% {
+    transform: translateY(-80%) rotate(-180deg) translateX(20%); }
+  to {
+    transform: translateY(0) rotate(-360deg) translateX(0%); } }
+
+.for-reset {
+  display: none; }
+
 #top .hideSide ul li:nth-child(1) {
   background: #e1e1e1; }
 
@@ -1644,10 +1743,14 @@ button.slick-prev {
     background: #52a2f8;
     width: 200px;
     height: 40px;
+    line-height: 40px;
     text-align: center;
     border-radius: 5px;
     display: inline-block;
     color: #07407e; }
+    .dashboard-btn.disable {
+      pointer-events: none;
+      opacity: .6; }
   .dashboard .hideSide {
     width: 20%;
     padding: 40px 0;
